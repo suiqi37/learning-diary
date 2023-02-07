@@ -1,0 +1,24 @@
+project:
+  type: book
+
+book:
+  title: "quarto"
+  author: "Qi Sui"
+  date: "2023/1/19"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - W1.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
