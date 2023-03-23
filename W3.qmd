@@ -1,0 +1,41 @@
+---
+title: "Remote sensing data"
+editor: visual
+---
+## Summary
+
+### corrections
+
+Occasionally remotely sensed images can contain flaws from the sensor, the atmopshere, the terrain ...
+
+- Geometric correction
+
+identify Ground Control Points (GPS) - take the coordinates and model them -linear regression match the distorted image with the gold standard image - plot these and try to minimise the RMSE
+
+- Atmospheric correction
+
+Unnecessary: Classification of a single image, Independent classification of multi date imagery, Composite images (combining images), Single dates or where training data extracted from all data
+
+Necessary: Biophysical parameters needed (e.g. temperature, leaf area index, NDVI), Using spectral signatures through time and space
+
+*But it is best to do both
+
+- - Types
+
+Relative：
+1.Normalize intensities of different bands within a single image
+2.Normalise intensities of bands from many dates to one date
+3.Dark object subtraction (DOS) or histogram adjustment
+4.Psuedo-invariant Features (PIFs)
+
+Absolute (definitive)：
+atmospheric radiative transfer models, require:An atmopsheric model (summer, tropical), Local atmopsheric visibility-from a weather station;Image altitude
+
+- Orthorectification / Topographic correction
+Requires:Sensor geometry;An elevation model
+Atmospheric correction happens before topographic correction.
+
+- Radiometric correction
+Digital Number(Sensors capture image brightness and distributed) to spectral radiance(the amount of light within a band from a sensor in the field of view (FOV))
+
+### Joining data sets（Mosaicking） / enhancements

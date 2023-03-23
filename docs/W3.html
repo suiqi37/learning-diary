@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>quarto - 3&nbsp; Presantation</title>
+<title>quarto - 4&nbsp; Remote sensing data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
 </style>
 
 
@@ -49,8 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./W3.html" rel="next">
-<link href="./W1.html" rel="prev">
+<link href="./summary.html" rel="next">
+<link href="./W2.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -89,7 +70,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presantation</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote sensing data</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -129,12 +110,12 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./W2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presantation</span></a>
+  <a href="./W2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presantation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./W3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote sensing data</span></a>
+  <a href="./W3.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote sensing data</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -152,14 +133,24 @@ div.csl-indent {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">4.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#corrections" id="toc-corrections" class="nav-link" data-scroll-target="#corrections"><span class="toc-section-number">4.1.1</span>  corrections</a></li>
+  <li><a href="#joining-data-setsmosaicking-enhancements" id="toc-joining-data-setsmosaicking-enhancements" class="nav-link" data-scroll-target="#joining-data-setsmosaicking-enhancements"><span class="toc-section-number">4.1.2</span>  Joining data sets（Mosaicking） / enhancements</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presantation</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote sensing data</span></h1>
 </div>
 
 
@@ -173,14 +164,39 @@ div.csl-indent {
 
 </header>
 
-<p><span class="citation" data-cites="Gondwe2021">(<a href="references.html#ref-Gondwe2021" role="doc-biblioref">Gondwe, Lin, and Munthali 2021</a>)</span></p>
+<section id="summary" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.1</span> Summary</h2>
+<section id="corrections" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="corrections"><span class="header-section-number">4.1.1</span> corrections</h3>
+<p>Occasionally remotely sensed images can contain flaws from the sensor, the atmopshere, the terrain …</p>
+<ul>
+<li>Geometric correction</li>
+</ul>
+<p>identify Ground Control Points (GPS) - take the coordinates and model them -linear regression match the distorted image with the gold standard image - plot these and try to minimise the RMSE</p>
+<ul>
+<li>Atmospheric correction</li>
+</ul>
+<p>Unnecessary: Classification of a single image, Independent classification of multi date imagery, Composite images (combining images), Single dates or where training data extracted from all data</p>
+<p>Necessary: Biophysical parameters needed (e.g.&nbsp;temperature, leaf area index, NDVI), Using spectral signatures through time and space</p>
+<p>*But it is best to do both</p>
+<ul>
+<li><ul>
+<li>Types</li>
+</ul></li>
+</ul>
+<p>Relative： 1.Normalize intensities of different bands within a single image 2.Normalise intensities of bands from many dates to one date 3.Dark object subtraction (DOS) or histogram adjustment 4.Psuedo-invariant Features (PIFs)</p>
+<p>Absolute (definitive)： atmospheric radiative transfer models, require:An atmopsheric model (summer, tropical), Local atmopsheric visibility-from a weather station;Image altitude</p>
+<ul>
+<li><p>Orthorectification / Topographic correction Requires:Sensor geometry;An elevation model Atmospheric correction happens before topographic correction.</p></li>
+<li><p>Radiometric correction Digital Number(Sensors capture image brightness and distributed) to spectral radiance(the amount of light within a band from a sensor in the field of view (FOV))</p></li>
+</ul>
+</section>
+<section id="joining-data-setsmosaicking-enhancements" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="joining-data-setsmosaicking-enhancements"><span class="header-section-number">4.1.2</span> Joining data sets（Mosaicking） / enhancements</h3>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-Gondwe2021" class="csl-entry" role="doc-biblioentry">
-Gondwe, Jane Ferah, Sun Lin, and Rodger Millar Munthali. 2021. <span>“Analysis of Land Use and Land Cover Changes in Urban Areas Using Remote Sensing: Case of Blantyre City.”</span> <em>Discrete Dynamics in Nature and Society</em> 2021. <a href="https://doi.org/10.1155/2021/8011565">https://doi.org/10.1155/2021/8011565</a>.
-</div>
-</div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -283,13 +299,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./W1.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">An Introduction to Remote Sensing</span></span>
+      <a href="./W2.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presantation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./W3.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote sensing data</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./summary.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

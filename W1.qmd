@@ -60,3 +60,15 @@ EMR experiences a number of changes prior to hitting the sensor
 
 ## Applications
 
+- Passive sensor
+
+
+- Active sensor
+
+The Shuttle Radar Topography Mission (SRTM) uses inSAR to measure Earth's altitude with two antennas. In just a few days, SRTM collected one of the most accurate digital elevation models of the Earth. Light Detection and Ranging (LiDAR) is an active sensor that measures altitude over the ground by taking light measurements from an aircraft or helicopter platform and bouncing back to the sensor. From this, digital surface models useful for forestry can be created.
+
+The two main advantages of active remote sensing are: 1.Ability to collect images day and night.2. Unaffected by clouds and adverse weather conditions.
+
+## Reflection
+
+There are many applications for viewing and processing remote sensing images, such as SNAP, QGIS, R, and GEE. It is better to choose a cloud that does not take up a lot of space, such as gee, and need to think about how to reduce the use of multiple software to analyze and process images in the workflow.

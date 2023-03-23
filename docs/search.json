@@ -30,7 +30,7 @@
   {
     "objectID": "W2.html",
     "href": "W2.html",
-    "title": "3  W2",
+    "title": "3  Presantation",
     "section": "",
     "text": "Gondwe, Jane Ferah, Sun Lin, and Rodger Millar Munthali. 2021. “Analysis of Land Use and Land Cover Changes in Urban Areas Using Remote Sensing: Case of Blantyre City.” Discrete Dynamics in Nature and Society 2021. https://doi.org/10.1155/2021/8011565."
   },
@@ -40,5 +40,26 @@
     "title": "2  An Introduction to Remote Sensing",
     "section": "",
     "text": "Landsat, Sentinel, et al.\n\n\n\n\nNear real time land cover data set with 10m resolution\nUrban/green space coverage and accessibility\nPollution studies\nIllegal logging\nForest fires\nTemperature studies (urban heat island)\nFlooding / disaster response / building footprints, et al.\n\n\n\n\nAcquiring information from a distance, achieved through sensors on platform(e.g.Satellites, Planes (aerial imagery), Drones, Phones, Free standing on the ground or sea (with hand held devices))\ntwo types of sensor: Passive & Active\n\n\n\nsenser type\n\n\n\n\n\nWaves of an electromagnetic field, travel through space and carry radiant energy = Electromagnetic radiation (EMR)\n\n\n\nelectromagentic waves\n\n\n\n\n\nEMR experiences a number of changes prior to hitting the sensor\n\nSurface: absorbed & transmitted\nAtmospheric: Rayleigh & Mie & Non selective\n\n*Because of atmospheric scattering, we have a big issue which can prevent capture of land/the target–clouds–removing them through atmospheric correction\n\n\n\n\nSpatial = the size of the raster grid per pixel (e.g. 20cm or 30m)\nSpectral = the number of bands it records data in（We can only observe where there aren’t absorbed by the atmosphere.）can be discrete (e.g. multi spectral) or continuous (e.g. hyper spectral)\nTemporal = the time it revisits (e.g. daily, every 7 days, on demand)\nRadiometric = identify differences in light or reflectance, in practice this is the range of possible values\n\n\n\n\n\nSize of features\nDate range\nRevisit requirement\nSpectral sensitivity\nCost"
+  },
+  {
+    "objectID": "W3.html",
+    "href": "W3.html",
+    "title": "4  Remote sensing data",
+    "section": "",
+    "text": "Occasionally remotely sensed images can contain flaws from the sensor, the atmopshere, the terrain …\n\nGeometric correction\n\nidentify Ground Control Points (GPS) - take the coordinates and model them -linear regression match the distorted image with the gold standard image - plot these and try to minimise the RMSE\n\nAtmospheric correction\n\nUnnecessary: Classification of a single image, Independent classification of multi date imagery, Composite images (combining images), Single dates or where training data extracted from all data\nNecessary: Biophysical parameters needed (e.g. temperature, leaf area index, NDVI), Using spectral signatures through time and space\n*But it is best to do both\n\n\nTypes\n\n\nRelative： 1.Normalize intensities of different bands within a single image 2.Normalise intensities of bands from many dates to one date 3.Dark object subtraction (DOS) or histogram adjustment 4.Psuedo-invariant Features (PIFs)\nAbsolute (definitive)： atmospheric radiative transfer models, require:An atmopsheric model (summer, tropical), Local atmopsheric visibility-from a weather station;Image altitude\n\nOrthorectification / Topographic correction Requires:Sensor geometry;An elevation model Atmospheric correction happens before topographic correction.\nRadiometric correction Digital Number(Sensors capture image brightness and distributed) to spectral radiance(the amount of light within a band from a sensor in the field of view (FOV))"
+  },
+  {
+    "objectID": "W1.html#applications",
+    "href": "W1.html#applications",
+    "title": "2  An Introduction to Remote Sensing",
+    "section": "2.2 Applications",
+    "text": "2.2 Applications\n\nPassive sensor\nActive sensor\n\nThe Shuttle Radar Topography Mission (SRTM) uses inSAR to measure Earth’s altitude with two antennas. In just a few days, SRTM collected one of the most accurate digital elevation models of the Earth. Light Detection and Ranging (LiDAR) is an active sensor that measures altitude over the ground by taking light measurements from an aircraft or helicopter platform and bouncing back to the sensor. From this, digital surface models useful for forestry can be created.\nThe two main advantages of active remote sensing are: 1.Ability to collect images day and night.2. Unaffected by clouds and adverse weather conditions."
+  },
+  {
+    "objectID": "W1.html#reflection",
+    "href": "W1.html#reflection",
+    "title": "2  An Introduction to Remote Sensing",
+    "section": "2.3 Reflection",
+    "text": "2.3 Reflection\nThere are many applications for viewing and processing remote sensing images, such as SNAP, QGIS, R, and GEE. It is better to choose a cloud that does not take up a lot of space, such as gee, and need to think about how to reduce the use of multiple software to analyze and process images in the workflow."
   }
 ]
