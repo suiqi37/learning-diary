@@ -9,6 +9,7 @@ book:
     - index.qmd
     - intro.qmd
     - W1.qmd
+    - W2.qmd
     - summary.qmd
     - references.qmd
 

@@ -1,12 +1,5 @@
 ## Introduction {#sec-introduction}
 
-This is a book created from markdown and executable code.
+Qi Sui
 
-See @knuth84 for additional discussion of literate programming.
 
-```{r}
-1 + 1
-```
-
-::: callout-note
-:::

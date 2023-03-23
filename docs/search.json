@@ -11,12 +11,12 @@
     "href": "intro.html",
     "title": "1  Introduction",
     "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "Qi Sui"
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "2  Summary",
+    "title": "4  Summary",
     "section": "",
     "text": "1 + 1\n\n[1] 2"
   },
@@ -25,6 +25,20 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "Gondwe, Jane Ferah, Sun Lin, and Rodger Millar Munthali. 2021.\n“Analysis of Land Use and Land Cover Changes in Urban Areas Using\nRemote Sensing: Case of Blantyre City.” Discrete Dynamics in\nNature and Society 2021. https://doi.org/10.1155/2021/8011565."
+  },
+  {
+    "objectID": "W2.html",
+    "href": "W2.html",
+    "title": "3  W2",
+    "section": "",
+    "text": "Gondwe, Jane Ferah, Sun Lin, and Rodger Millar Munthali. 2021. “Analysis of Land Use and Land Cover Changes in Urban Areas Using Remote Sensing: Case of Blantyre City.” Discrete Dynamics in Nature and Society 2021. https://doi.org/10.1155/2021/8011565."
+  },
+  {
+    "objectID": "W1.html",
+    "href": "W1.html",
+    "title": "2  An Introduction to Remote Sensing",
+    "section": "",
+    "text": "Landsat, Sentinel, et al.\n\n\n\n\nNear real time land cover data set with 10m resolution\nUrban/green space coverage and accessibility\nPollution studies\nIllegal logging\nForest fires\nTemperature studies (urban heat island)\nFlooding / disaster response / building footprints, et al.\n\n\n\n\nAcquiring information from a distance, achieved through sensors on platform(e.g.Satellites, Planes (aerial imagery), Drones, Phones, Free standing on the ground or sea (with hand held devices))\ntwo types of sensor: Passive & Active\n\n\n\nsenser type\n\n\n\n\n\nWaves of an electromagnetic field, travel through space and carry radiant energy = Electromagnetic radiation (EMR)\n\n\n\nelectromagentic waves\n\n\n\n\n\nEMR experiences a number of changes prior to hitting the sensor\n\nSurface: absorbed & transmitted\nAtmospheric: Rayleigh & Mie & Non selective\n\n*Because of atmospheric scattering, we have a big issue which can prevent capture of land/the target–clouds–removing them through atmospheric correction\n\n\n\n\nSpatial = the size of the raster grid per pixel (e.g. 20cm or 30m)\nSpectral = the number of bands it records data in（We can only observe where there aren’t absorbed by the atmosphere.）can be discrete (e.g. multi spectral) or continuous (e.g. hyper spectral)\nTemporal = the time it revisits (e.g. daily, every 7 days, on demand)\nRadiometric = identify differences in light or reflectance, in practice this is the range of possible values\n\n\n\n\n\nSize of features\nDate range\nRevisit requirement\nSpectral sensitivity\nCost"
   }
 ]
