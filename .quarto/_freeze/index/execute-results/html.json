@@ -1,7 +1,7 @@
 {
-  "hash": "d3beb5bad82a501e0a6a12e4fd2089c3",
+  "hash": "088d8b931b1184cc597b70172a357885",
   "result": {
-    "markdown": "# Preface {.unnumbered}\n\nThis is a Quarto book.\n\nTo learn more about Quarto books visit <https://quarto.org/docs/books>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n\n\n::: callout-note\nhello\n:::\n",
+    "markdown": "# Preface {.unnumbered}\n\nRemote sensing learning diary.\n\nTo learn more about Quarto books visit <https://quarto.org/docs/books>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n\n\n::: callout-note\nhello\n:::\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
