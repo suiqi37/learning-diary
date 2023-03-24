@@ -15,7 +15,7 @@ editor: visual
 
 -   Singapore Master Plan \> A Sustainable and Resilient City of the Future Adapting to Climate Change \> Protecting Our Coastline
 
-"Building on the findings from BCA's Coastal Adaptation Study, long term strategies will be developed to protect Singapore's coasts. In the meantime, several measures have been implemented to protect our coastline. Some of these strategies include:Flood walls, Earth mounds, Revetments,Flood gates and pump stations"[@MASTERPLAN]
+"Building on the findings from BCA's Coastal Adaptation Study, long term strategies will be developed to protect Singapore's coasts. In the meantime, several measures have been implemented to protect our coastline. Some of these strategies include:Flood walls, Earth mounds, Revetments,Flood gates and pump stations"[\@MASTERPLAN](https://www.ura.gov.sg/Corporate/Planning/Master-Plan)
 
 ## Applications
 

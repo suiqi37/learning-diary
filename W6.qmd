@@ -75,18 +75,22 @@ Source:[Soner Yildirim](https://towardsdatascience.com/hyperparameter-tuning-for
 
 ## Applications
 
-- SVM
+-   SVM 
+
 In [@Pal2006], two experiments were conducted to compare the performance of multi-class support vector machines (SVMs) against maximum likelihood (ML) and artificial neural network (ANN) methods in terms of classification accuracy. The experiments focused on land cover classification using multispectral (Landsat-7 ETM+) and hyperspectral (DAIS) data in test areas located in eastern England and central Spain. The findings demonstrate that the SVM classifier achieved higher classification accuracy compared to the ML and ANN classifiers. Furthermore, the results suggest that the SVM classifier is suitable for use with small training datasets and high-dimensional data.
 
 In this article, one against one of SVM performs better than one against the rest, The higher training time requirements of the 'one against one' approach may be due the algorithm used to solve quadratic programming optimization problem.The results indicate that SVM can achieve high classification accuracy with high dimensional data, even if the size of the training dataset is small.
 
 It is recommended to use one against one to generate multi-class SVM. But is ""one against one performing better than one against the rest" always been like this, or is it influenced by the research object chosen in the article?
 
-- Unsupervised and supervised in remote sensing classification
+-   Unsupervised and supervised in remote sensing classification 
+
 In a classification study of LULC in Nepal, supervised classification methods (using MLC) yielded higher accuracy than unsupervised methods (using ISODATA)[@KBK].
 
 Why is there a big difference in the accuracy of different band combinations? Possibly affected by shadowing effects, which are significantly reduced in ratioband combinations
 
 ## Reflection
 
-Compared with Unsupervised classification, supervised classification has higher accuracy, among which MLC is the mainstream method, and it has higher accuracy and interpretability
+Compared with Unsupervised classification, supervised classification has higher accuracy, among which MLC is the mainstream method, and it has higher accuracy and interpretability.
+
+Different classification methods can distinguish different objects, and existing methods have made full use of the bands that existing sensors can detect. The main direction of current research is how to improve the accuracy of classification and which bands to filter to get the desired research object

@@ -1,5 +1,6 @@
 ---
-title: "Presantation"
+title: "Presentation"
 editor: visual
 ---
-https://suiqi37.github.io/0023week2/
+
+[Presentation on sensor](https://suiqi37.github.io/0023week2/)

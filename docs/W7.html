@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -110,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./W2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presantation</span></a>
+  <a href="./W2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presentation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -120,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./W4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">W4</span></a>
+  <a href="./W4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -141,11 +160,6 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./W8.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Temperature and policy</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -232,9 +246,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Source:<a href="https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLII-3/61/2018/isprs-archives-XLII-3-61-2018.pdf">Barsi et al.&nbsp;2018 Accuracy Dimensions in Remote Sensing</a></p>
 <p>In remote sensing we focus on:</p>
-<p>PA Producer accuracy (recall or true positive rate or sensitivity)</p>
-<p>UA User’s accuracy (consumer’s accuracy or precision or positive predictive value</p>
-<p>OA the (overall) accuracy</p>
+<ul>
+<li><p>PA Producer accuracy (recall or true positive rate or sensitivity)</p></li>
+<li><p>UA User’s accuracy (consumer’s accuracy or precision or positive predictive value</p></li>
+<li><p>OA the (overall) accuracy</p></li>
+</ul>
 <p>*kappa can express the accuracy of an image compared to the results by chance, but some people say that it has nothing to do with accuracy, and there is no clear conclusion</p>
 <ol start="2" type="1">
 <li>F1-Score</li>
@@ -270,11 +286,28 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="applications" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">8.2</span> Applications</h2>
+<p>This paper proposes a novel collaborative learning framework for semi-supervised HSI classification with joint deep convolutional neural networks and deep clustering<span class="citation" data-cites="Toutin2011">(<a href="references.html#ref-Toutin2011" role="doc-biblioref">Toutin 2011</a>)</span>. Through analysis the source of geometric distortions and deformations，model the distortions with different two-dimensional (2D)/3D physical/empirical models, use EO/GIS data to do 3D geometric correction</p>
+<p>Deep learning offers excellent potential for hyperspectral image (HSI) classification, but it requires a large number of labeled samples, and collecting high-quality labels for HSI is extremely expensive and time-consuming. Furthermore, deep learning methods may overfit when available training samples are limited.</p>
+<p>This study use simple random sampling (SRS), systematic sampling (SYS), and stratified random sampling (StrRS). The results are analyzed in terms of the correctly classified and misclassified proportion of individual classes, the overall accuracy, and the kappa coefficient of agreement. For estimating the overall accuracy, different sampling designs achieve very similar levels of precision with fewer samples. To achieve a better estimate of the kappa coefficient, stratified random sampling is recommended for use on a map with a high class proportion difference, while random sampling is preferred for a map with low spatial autocorrelation and a low class proportion difference.<span class="citation" data-cites="Chen2009">(<a href="references.html#ref-Chen2009" role="doc-biblioref">Chen and Wei 2009</a>)</span></p>
+<p>The impact of spatial autocorrelation and class proportions on the choice of sampling method and sample size is complex. Recommendations for specific sampling methods and sizes depend on the level of spatial autocorrelation, differences in class proportions, and the required precision metrics for a given application</p>
 </section>
 <section id="reflection" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.3</span> Reflection</h2>
+<p>When calculating the accuracy of classification, unlike processing non-spatial data, spatial autocorrelation should also be taken into account. If it is not considered, it will lead to overfitted, so classification has a special test method for remote sensing applications.</p>
+<p>I agree with the view that “Kappa does not necessarily represent accuracy”. As <span class="citation" data-cites="Foody2020">(<a href="references.html#ref-Foody2020" role="doc-biblioref">Foody 2020</a>)</span> said, it needs to be explained in conjunction with the confusion matrix and details of the sample.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-Chen2009" class="csl-entry" role="doc-biblioentry">
+Chen, Dong Mei, and Hui Wei. 2009. <span>“The Effect of Spatial Autocorrelation and Class Proportion on the Accuracy Measures from Different Sampling Designs.”</span> <em>ISPRS Journal of Photogrammetry and Remote Sensing</em> 64 (March): 140–50. <a href="https://doi.org/10.1016/J.ISPRSJPRS.2008.07.004">https://doi.org/10.1016/J.ISPRSJPRS.2008.07.004</a>.
+</div>
+<div id="ref-Foody2020" class="csl-entry" role="doc-biblioentry">
+Foody, Giles M. 2020. <span>“Explaining the Unsuitability of the Kappa Coefficient in the Assessment and Comparison of the Accuracy of Thematic Maps Obtained by Image Classification.”</span> <em>Remote Sensing of Environment</em> 239 (March): 111630. <a href="https://doi.org/10.1016/J.RSE.2019.111630">https://doi.org/10.1016/J.RSE.2019.111630</a>.
+</div>
+<div id="ref-Toutin2011" class="csl-entry" role="doc-biblioentry">
+Toutin, Thierry. 2011. <span>“State-of-the-Art of Geometric Correction of Remote Sensing Data: A Data Fusion Perspective.”</span> <em>Http://Dx.doi.org/10.1080/19479832.2010.539188</em> 2: 3–35. <a href="https://doi.org/10.1080/19479832.2010.539188">https://doi.org/10.1080/19479832.2010.539188</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

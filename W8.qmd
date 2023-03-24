@@ -27,10 +27,20 @@ Source:[MacLachlan et al. 2021](https://www.frontiersin.org/articles/10.3389/fbu
 
 \*There is a gap between global, metropolitan, local policy and data analysis.
 
-Should we focus on equal access/distribution or equitable access/distribution or providing environmental justice?
+- Should we focus on equal access/distribution or equitable access/distribution or providing environmental justice?
 
 In order to create a more just and sustainable society, we need to consider all three concepts in tandem. We need to strive for equal access/distribution where possible, but we also need to address the structural and systemic barriers that prevent equitable access/distribution. Additionally, we need to ensure that everyone has the right to a healthy and safe environment through environmental justice initiatives.
 
 ## Applications
 
+Use land surface temperature and vegetation indices from Landsat, calculate NDVI. Combined with weather station data, intraannual and interannual variations in the relationship between remotely sensed surface temperature, NDVI, and Sky Harbor Meteorology are analyzed to better understand the cooling effect provided by vegetation. The seasonal patterns that lead to the conclusion of the relationship between NDVI and surface temperature are consistently relevant at regional scales. The cooling ecosystem services produced by vegetation in the Phoenix metropolitan area are strongest in summer and weakest in winter. The availability of this ecosystem service in the summer significantly reduces Phoenix's summer bare surface temperatures, which often exceed levels that are dangerous for humans. Promoting cool refuge through urban landscape design can be an efficient use of resources to mitigate thermal risk landscapes and reduce human vulnerability to heat[@GDarrel].
+
+When assessing potential mitigation strategies for current and future urban climate change, a systematic analysis is necessary that explicitly assesses the benefits and consequences of various risk reduction and coping strategies [@Gober2010].
+
+But consider the issue of inequality. Without concerted efforts to intervene in management strategies, green space inequities will increase, leading to exacerbated temperature extremes and induced short- and long-term vulnerabilities. Increasing park vegetation in low-income neighborhoods is one strategy to more equitably redistribute urban green space and cooler temperatures.
+
 ## Reflection
+
+The idea and process of remote sensing application to UHI policy are also applicable to other policy research.
+
+From international to cities, many policies related to environmental protection and sustainable development can apply remote sensing data. But there is a bit of a disconnect at the moment, and the current research only uses these policies as a research background, and the results do not feed back on the policies. The quantitative approach used in remote sensing analysis is a good measure of urban policy indicators, so combining analysis and policy can make research more meaningful

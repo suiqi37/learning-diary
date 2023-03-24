@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -110,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./W2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presantation</span></a>
+  <a href="./W2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presentation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -120,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./W4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">W4</span></a>
+  <a href="./W4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -145,11 +164,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
   </div>
 </li>
@@ -164,8 +178,8 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">4.1</span>  Summary</a>
   <ul class="collapse">
-  <li><a href="#corrections" id="toc-corrections" class="nav-link" data-scroll-target="#corrections"><span class="toc-section-number">4.1.1</span>  corrections</a></li>
-  <li><a href="#joining-data-setsmosaickingenhancements" id="toc-joining-data-setsmosaickingenhancements" class="nav-link" data-scroll-target="#joining-data-setsmosaickingenhancements"><span class="toc-section-number">4.1.2</span>  Joining data sets(Mosaicking/enhancements)</a></li>
+  <li><a href="#corrections" id="toc-corrections" class="nav-link" data-scroll-target="#corrections"><span class="toc-section-number">4.1.1</span>  Corrections</a></li>
+  <li><a href="#joining-data-sets-mosaickingenhancements" id="toc-joining-data-sets-mosaickingenhancements" class="nav-link" data-scroll-target="#joining-data-sets-mosaickingenhancements"><span class="toc-section-number">4.1.2</span>  Joining data sets (Mosaicking/enhancements)</a></li>
   </ul></li>
   <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="toc-section-number">4.2</span>  Applications</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">4.3</span>  Reflection</a></li>
@@ -194,7 +208,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="summary" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.1</span> Summary</h2>
 <section id="corrections" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="corrections"><span class="header-section-number">4.1.1</span> corrections</h3>
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="corrections"><span class="header-section-number">4.1.1</span> Corrections</h3>
 <p>Occasionally remotely sensed images can contain flaws from the sensor, the atmopshere, the terrain …</p>
 <ul>
 <li>Geometric correction</li>
@@ -219,8 +233,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Digital Number(Sensors capture image brightness and distributed) to spectral radiance(the amount of light within a band from a sensor in the field of view (FOV))</p>
 <p>*Fortunately, some satellite products report corrected data such as Landsat ARD, LEDPAS, L8SR, LaSRC…., which can be used directly.</p>
 </section>
-<section id="joining-data-setsmosaickingenhancements" class="level3" data-number="4.1.2">
-<h3 data-number="4.1.2" class="anchored" data-anchor-id="joining-data-setsmosaickingenhancements"><span class="header-section-number">4.1.2</span> Joining data sets(Mosaicking/enhancements)</h3>
+<section id="joining-data-sets-mosaickingenhancements" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="joining-data-sets-mosaickingenhancements"><span class="header-section-number">4.1.2</span> Joining data sets (Mosaicking/enhancements)</h3>
 <ul>
 <li>Mosaicking</li>
 </ul>
@@ -237,11 +251,34 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="applications" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">4.2</span> Applications</h2>
+<ul>
+<li>The processing steps, in which the data fusion applied, are:</li>
+</ul>
+<p>1.acquisition of image(s) and pre-processing of sensor/image metadata (useless for empirical models);</p>
+<p>2.acquisition of the ground data (control/check/pass) with 2D image coordinates and 3D map coordinates;</p>
+<p>3.computation of the mathematical models, in which the different data are fused for each image;</p>
+<p>4.image(s) rectification preferably with elevation data (contour lines, DEM).<span class="citation" data-cites="Grodecki2003">(<a href="references.html#ref-Grodecki2003" role="doc-biblioref">Grodecki and Dial 2003</a>)</span></p>
+<p>The main advantage is that <strong>geometric correction</strong> is viewed as a complete process, rather than the different steps of this complete and complex process being viewed and addressed individually and independently.</p>
+<ul>
+<li>Texture and PCA</li>
+</ul>
+<p>This article performs 4 change detection analyzes (image difference, image ratio, regression analysis and PCA) on all exported texture images, bittemporal PCA for the texture feature energy proved to be the best results. <span class="citation" data-cites="Tomowski">(<a href="references.html#ref-Tomowski" role="doc-biblioref">Tomowski et al., n.d.</a>)</span></p>
+<p>The problem is that the test area used was ideal to show the possibility of texture change analysis, the area most of the buildings are completely destroyed, there is no texture on the location of the destroyed buildings.</p>
 </section>
 <section id="reflection" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">4.3</span> Reflection</h2>
+<p>When I used to refer to the existing buildings in urban design, I found that the position and shape of the buildings in the satellite photos were deformed, so it is necessary to perform geo-calibration first. But in fact, there is no way to restore it to the plane 100%, because there is still the influence of plane projection.</p>
+<p>The enhancements should consider the size and complexity of the research scope, the larger and more complex the scope, the more information the enhancements may miss</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-Grodecki2003" class="csl-entry" role="doc-biblioentry">
+Grodecki, Jacek, and Gene Dial. 2003. <span>“Block Adjustment of High-Resolution Satellite Images Described by Rational Polynomials.”</span>
+</div>
+<div id="ref-Tomowski" class="csl-entry" role="doc-biblioentry">
+Tomowski, Daniel, Sascha Klonus, Manfred Ehlers, Ulrich Michel, and Peter Reinartz. n.d. <span>“CHANGE VISUALIZATION THROUGH a TEXTURE-BASED ANALYSIS APPROACH FOR DISASTER APPLICATIONS.”</span>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -346,12 +383,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./W2.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presantation</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presentation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./W4.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">W4</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

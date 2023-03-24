@@ -57,7 +57,7 @@ Other enhancements: Ratio, Low pass or low frequency, High pass or high frequenc
 
 ## Applications
 
-- The processing steps, in which the data fusion applied, are:
+-   The processing steps, in which the data fusion applied, are:
 
 1.acquisition of image(s) and pre-processing of sensor/image metadata (useless for empirical models);
 
@@ -69,9 +69,14 @@ Other enhancements: Ratio, Low pass or low frequency, High pass or high frequenc
 
 The main advantage is that **geometric correction** is viewed as a complete process, rather than the different steps of this complete and complex process being viewed and addressed individually and independently.
 
-- Texture and PCA
+-   Texture and PCA
 
+This article performs 4 change detection analyzes (image difference, image ratio, regression analysis and PCA) on all exported texture images, bittemporal PCA for the texture feature energy proved to be the best results. [@Tomowski]
 
+The problem is that the test area used was ideal to show the possibility of texture change analysis, the area most of the buildings are completely destroyed, there is no texture on the location of the destroyed buildings.
 
 ## Reflection
 
+When I used to refer to the existing buildings in urban design, I found that the position and shape of the buildings in the satellite photos were deformed, so it is necessary to perform geo-calibration first. But in fact, there is no way to restore it to the plane 100%, because there is still the influence of plane projection.
+
+The enhancements should consider the size and complexity of the research scope, the larger and more complex the scope, the more information the enhancements may miss

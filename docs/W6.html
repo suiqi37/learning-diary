@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -110,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./W2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presantation</span></a>
+  <a href="./W2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presentation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -120,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./W4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">W4</span></a>
+  <a href="./W4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -141,11 +160,6 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./W8.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Temperature and policy</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -274,12 +288,32 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="applications" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">7.2</span> Applications</h2>
-<p>-SVM</p>
+<ul>
+<li>SVM</li>
+</ul>
+<p>In <span class="citation" data-cites="Pal2006">(<a href="references.html#ref-Pal2006" role="doc-biblioref">Pal and Mather 2006</a>)</span>, two experiments were conducted to compare the performance of multi-class support vector machines (SVMs) against maximum likelihood (ML) and artificial neural network (ANN) methods in terms of classification accuracy. The experiments focused on land cover classification using multispectral (Landsat-7 ETM+) and hyperspectral (DAIS) data in test areas located in eastern England and central Spain. The findings demonstrate that the SVM classifier achieved higher classification accuracy compared to the ML and ANN classifiers. Furthermore, the results suggest that the SVM classifier is suitable for use with small training datasets and high-dimensional data.</p>
+<p>In this article, one against one of SVM performs better than one against the rest, The higher training time requirements of the ‘one against one’ approach may be due the algorithm used to solve quadratic programming optimization problem.The results indicate that SVM can achieve high classification accuracy with high dimensional data, even if the size of the training dataset is small.</p>
+<p>It is recommended to use one against one to generate multi-class SVM. But is ““one against one performing better than one against the rest” always been like this, or is it influenced by the research object chosen in the article?</p>
+<ul>
+<li>Unsupervised and supervised in remote sensing classification</li>
+</ul>
+<p>In a classification study of LULC in Nepal, supervised classification methods (using MLC) yielded higher accuracy than unsupervised methods (using ISODATA)<span class="citation" data-cites="KBK">(<a href="references.html#ref-KBK" role="doc-biblioref">Bahadur 2009</a>)</span>.</p>
+<p>Why is there a big difference in the accuracy of different band combinations? Possibly affected by shadowing effects, which are significantly reduced in ratioband combinations</p>
 </section>
 <section id="reflection" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
+<p>Compared with Unsupervised classification, supervised classification has higher accuracy, among which MLC is the mainstream method, and it has higher accuracy and interpretability.</p>
+<p>Different classification methods can distinguish different objects, and existing methods have made full use of the bands that existing sensors can detect. The main direction of current research is how to improve the accuracy of classification and which bands to filter to get the desired research object</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-KBK" class="csl-entry" role="doc-biblioentry">
+Bahadur, K. C. Krishna. 2009. <span>“Improving Landsat and IRS Image Classification: Evaluation of Unsupervised and Supervised Classification Through Band Ratios and DEM in a Mountainous Landscape in Nepal.”</span> <em>Remote Sensing 2009, Vol. 1, Pages 1257-1272</em> 1 (December): 1257–72. <a href="https://doi.org/10.3390/RS1041257">https://doi.org/10.3390/RS1041257</a>.
+</div>
+<div id="ref-Pal2006" class="csl-entry" role="doc-biblioentry">
+Pal, M., and P. M. Mather. 2006. <span>“Support Vector Machines for Classification in Remote Sensing.”</span> <em>Http://Dx.doi.org/10.1080/01431160512331314083</em> 26 (March): 1007–11. <a href="https://doi.org/10.1080/01431160512331314083">https://doi.org/10.1080/01431160512331314083</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

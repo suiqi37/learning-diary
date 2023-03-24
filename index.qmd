@@ -1,5 +1,3 @@
 # Preface {.unnumbered}
 
 Qi Sui's Remote sensing learning diary.
-
-

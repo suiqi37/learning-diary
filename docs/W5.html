@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -30,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
+<link href="./W6.html" rel="next">
 <link href="./W4.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -110,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./W2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presantation</span></a>
+  <a href="./W2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presentation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -120,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./W4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">W4</span></a>
+  <a href="./W4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -130,7 +149,17 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./W6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./W7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Classification and accuracy</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./W8.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Temperature and policy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -220,16 +249,22 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="applications" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">6.2</span> Applications</h2>
-<ul>
-<li><p>Reducing images by region</p></li>
-<li><p>Reducing images by neighbourhood</p></li>
-</ul>
+<p>In GEE, remote sensing datasets were used in 90% of the studies, while ready-to-use products were used in only 10% of the articles for analysis. Among remote sensing datasets, optical satellite imagery with moderate spatial resolution, particularly Landsat data archived for over 40 years, was widely utilized. In satellite image processing, linear regression and random forest were the most frequently employed algorithms. As for the ready-to-use products, 27% of vegetation, crop, land cover mapping, and drought monitoring studies utilized the Normalized Difference Vegetation Index (NDVI)<span class="citation" data-cites="Tamiminia2020">(<a href="references.html#ref-Tamiminia2020" role="doc-biblioref">Tamiminia et al. 2020</a>)</span>. GEE has made significant progress and continues to do so in addressing global challenges related to geobig data processing.</p>
+<p>Currently, GEE offers a restricted range of algorithms for object-based image analysis and clustering methods<span class="citation" data-cites="Gorelick2017">(<a href="references.html#ref-Gorelick2017" role="doc-biblioref">Gorelick et al. 2017</a>)</span>. However, the utilization of advanced segmentation and clustering algorithms is crucial for accurately defining ground truth data, particularly in large-scale land cover mapping. This is particularly important for effectively employing machine learning tools.</p>
 </section>
 <section id="reflection" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.3</span> Reflection</h2>
-<p>GEE currently appears to support the entire analysis process, including data collection, collation, screening, analysis and presentation. But there may be a risk that it will no longer be free and open source? In the future, I hope to develop the function of cooperative work similar to github.</p>
+<p>GEE currently appears to support the entire analysis process, including data collection, collation, screening, analysis and presentation. But there may be a risk that it will no longer be free and open source? In the future, I hope it can develop the function of cooperative work similar to github.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-Gorelick2017" class="csl-entry" role="doc-biblioentry">
+Gorelick, Noel, Matt Hancher, Mike Dixon, Simon Ilyushchenko, David Thau, and Rebecca Moore. 2017. <span>“Google Earth Engine: Planetary-Scale Geospatial Analysis for Everyone.”</span> <em>Remote Sensing of Environment</em> 202 (December): 18–27. <a href="https://doi.org/10.1016/J.RSE.2017.06.031">https://doi.org/10.1016/J.RSE.2017.06.031</a>.
+</div>
+<div id="ref-Tamiminia2020" class="csl-entry" role="doc-biblioentry">
+Tamiminia, Haifa, Bahram Salehi, Masoud Mahdianpari, Lindi Quackenbush, Sarina Adeli, and Brian Brisco. 2020. <span>“Google Earth Engine for Geo-Big Data Applications: A Meta-Analysis and Systematic Review.”</span> <em>ISPRS Journal of Photogrammetry and Remote Sensing</em> 164 (June): 152–70. <a href="https://doi.org/10.1016/J.ISPRSJPRS.2020.04.001">https://doi.org/10.1016/J.ISPRSJPRS.2020.04.001</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -334,12 +369,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./W4.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">W4</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./W6.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
