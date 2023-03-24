@@ -1,0 +1,88 @@
+---
+title: "Classification and accuracy"
+editor: visual
+---
+
+## Summary
+
+### Landcover classification
+
+\*Cannot rely on pre-classified data because the classification method and level of detail may not fully meet the needs of the research, and there may be potential bias.
+
+-   Object based image analysis (OBIA)
+
+![SegOptim](img/7.1.png)
+
+Source:[João Gonçalves 2020](https://segoptim.bitbucket.io/docs/)
+
+\*More accurate than pixel-based analysis, but very dependent on data quality and possible be over-segmentation.
+
+-   Sub pixel analysis
+
+![Sub pixel analysis](img/7.2.png)
+
+Source:[Plaza et al. (2002)](https://ieeexplore.ieee.org/document/1046852)
+
+\*Individual pixels represent smaller areas and the spatial resolution is higher. Also more accurate and detailed. But it requires high data accuracy, time-consuming and sensitivity to noise
+
+### Accuracy
+
+1.  Binary confusion matrix
+
+![matrix](img/7.3.png)
+
+Source:[Barsi et al. 2018 Accuracy Dimensions in Remote Sensing](https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLII-3/61/2018/isprs-archives-XLII-3-61-2018.pdf)
+
+In remote sensing we focus on:
+
+-   PA Producer accuracy (recall or true positive rate or sensitivity)
+
+-   UA User's accuracy (consumer's accuracy or precision or positive predictive value
+
+-   OA the (overall) accuracy
+
+\*kappa can express the accuracy of an image compared to the results by chance, but some people say that it has nothing to do with accuracy, and there is no clear conclusion
+
+2.  F1-Score
+
+We can't have both a high high producer accuracy and a high user's accuracy, so the F1-Score (F Measure) combines both PA and UA: Value from 0 to 1, where 1 is better performance
+
+3.  Receiver Operating Characteristic Curve (the ROC Curve)
+
+Consider True Negatives, consider precision and recall at the same time , solve the problem of data imbalance
+
+![matrix](img/7.4.png)
+
+Source:[Barsi et al. 2018 Accuracy Dimensions in Remote Sensing](https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLII-3/61/2018/isprs-archives-XLII-3-61-2018.pdf)
+
+True positive rate = TP/TP+FN = good =every plane is a plane ?
+
+False positive rate = FP/FP+TN= good = every cloud is predicted as noise (not a plane) ?
+
+-   Remote sensing approach
+
+class definition\>pre-processing:train and test split(train 70% test 30% in usual)or cross validation\>training\>pixel assignment\>accuracy assessment
+
+But because Spatial autocorrelation between training and test sets, best approach is spatial cross validation, can use Support Vector Machine classifier that requires hyperparameters (set before the classification)
+
+![Schematic of hyperparameter tuning and performance estimation levels in CV](img/7.5.png)
+
+Source:[Lovelace et al. 2022](https://r.geocompx.org/spatial-cv.html)
+
+\*pixels perform better than the objects
+
+## Applications
+
+This paper proposes a novel collaborative learning framework for semi-supervised HSI classification with joint deep convolutional neural networks and deep clustering[@Toutin2011]. Through analysis the source of geometric distortions and deformations，model the distortions with different two-dimensional (2D)/3D physical/empirical models, use EO/GIS data to do 3D geometric correction
+
+Deep learning offers excellent potential for hyperspectral image (HSI) classification, but it requires a large number of labeled samples, and collecting high-quality labels for HSI is extremely expensive and time-consuming. Furthermore, deep learning methods may overfit when available training samples are limited.
+
+This study use simple random sampling (SRS), systematic sampling (SYS), and stratified random sampling (StrRS). The results are analyzed in terms of the correctly classified and misclassified proportion of individual classes, the overall accuracy, and the kappa coefficient of agreement. For estimating the overall accuracy, different sampling designs achieve very similar levels of precision with fewer samples. To achieve a better estimate of the kappa coefficient, stratified random sampling is recommended for use on a map with a high class proportion difference, while random sampling is preferred for a map with low spatial autocorrelation and a low class proportion difference.[@Chen2009]
+
+The impact of spatial autocorrelation and class proportions on the choice of sampling method and sample size is complex. Recommendations for specific sampling methods and sizes depend on the level of spatial autocorrelation, differences in class proportions, and the required precision metrics for a given application
+
+## Reflection
+
+When calculating the accuracy of classification, unlike processing non-spatial data, spatial autocorrelation should also be taken into account. If it is not considered, it will lead to overfitted, so classification has a special test method for remote sensing applications.
+
+I agree with the view that "Kappa does not necessarily represent accuracy". As [@Foody2020] said, it needs to be explained in conjunction with the confusion matrix and details of the sample.

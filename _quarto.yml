@@ -2,7 +2,7 @@ project:
   type: book
   output-dir: docs
 book:
-  title: "quarto"
+  title: "Remote sensing Learning diary"
   author: "Qi Sui"
   date: "2023/1/19"
   chapters:
@@ -11,6 +11,11 @@ book:
     - W1.qmd
     - W2.qmd
     - W3.qmd
+    - W4.qmd
+    - W5.qmd
+    - W6.qmd
+    - W7.qmd
+    - W8.qmd
     - summary.qmd
     - references.qmd
 

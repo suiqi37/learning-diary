@@ -2,40 +2,76 @@
 title: "Remote sensing data"
 editor: visual
 ---
+
 ## Summary
 
-### corrections
+### Corrections
 
 Occasionally remotely sensed images can contain flaws from the sensor, the atmopshere, the terrain ...
 
-- Geometric correction
+-   Geometric correction
 
 identify Ground Control Points (GPS) - take the coordinates and model them -linear regression match the distorted image with the gold standard image - plot these and try to minimise the RMSE
 
-- Atmospheric correction
+-   Atmospheric correction
 
 Unnecessary: Classification of a single image, Independent classification of multi date imagery, Composite images (combining images), Single dates or where training data extracted from all data
 
 Necessary: Biophysical parameters needed (e.g. temperature, leaf area index, NDVI), Using spectral signatures through time and space
 
-*But it is best to do both
+\*But it is best to do both
 
-- - Types
+Types:
 
-Relative：
-1.Normalize intensities of different bands within a single image
-2.Normalise intensities of bands from many dates to one date
-3.Dark object subtraction (DOS) or histogram adjustment
-4.Psuedo-invariant Features (PIFs)
+Relative： 1.Normalize intensities of different bands within a single image 2.Normalise intensities of bands from many dates to one date 3.Dark object subtraction (DOS) or histogram adjustment 4.Psuedo-invariant Features (PIFs)
 
-Absolute (definitive)：
-atmospheric radiative transfer models, require:An atmopsheric model (summer, tropical), Local atmopsheric visibility-from a weather station;Image altitude
+Absolute (definitive)： atmospheric radiative transfer models, require: An atmopsheric model (summer, tropical), Local atmopsheric visibility-from a weather station;Image altitude
 
-- Orthorectification / Topographic correction
-Requires:Sensor geometry;An elevation model
-Atmospheric correction happens before topographic correction.
+-   Orthorectification/Topographic correction
 
-- Radiometric correction
+Requires: Sensor geometry; An elevation model (Atmospheric correction happens before topographic correction)
+
+-   Radiometric correction
+
 Digital Number(Sensors capture image brightness and distributed) to spectral radiance(the amount of light within a band from a sensor in the field of view (FOV))
 
-### Joining data sets（Mosaicking） / enhancements
+\*Fortunately, some satellite products report corrected data such as Landsat ARD, LEDPAS, L8SR, LaSRC...., which can be used directly.
+
+### Joining data sets (Mosaicking/enhancements)
+
+-   Mosaicking
+
+feather the images together, creates a seamless mosaic or image(s)
+
+![](img/3.1.png)
+
+Source:[Harris Geospatial](https://www.l3harrisgeospatial.com/docs/mosaicseamless.html)
+
+-   Image Enhancement
+
+Contrast Enhancement: Minimum - Maximum, Percentage Linear and Standard Deviation, Piecewise Linear Contrast Stretch,
+
+Other enhancements: Ratio, Low pass or low frequency, High pass or high frequency, Edge enhancement, PCA, Texture, Fusion(Pan sharpen,Data Fusion)
+
+\*Light toned areas appearing lighter and dark areas appearing darker, making visual interpretation much easier.To target different image features, such as the input range is not uniformly distributed, choose different enhancement methods.
+
+## Applications
+
+- The processing steps, in which the data fusion applied, are:
+
+1.acquisition of image(s) and pre-processing of sensor/image metadata (useless for empirical models);
+
+2.acquisition of the ground data (control/check/pass) with 2D image coordinates and 3D map coordinates;
+
+3.computation of the mathematical models, in which the different data are fused for each image;
+
+4.image(s) rectification preferably with elevation data (contour lines, DEM).[@Grodecki2003]
+
+The main advantage is that **geometric correction** is viewed as a complete process, rather than the different steps of this complete and complex process being viewed and addressed individually and independently.
+
+- Texture and PCA
+
+
+
+## Reflection
+

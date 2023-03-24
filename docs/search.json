@@ -39,27 +39,146 @@
     "href": "W1.html",
     "title": "2  An Introduction to Remote Sensing",
     "section": "",
-    "text": "Landsat, Sentinel, et al.\n\n\n\n\nNear real time land cover data set with 10m resolution\nUrban/green space coverage and accessibility\nPollution studies\nIllegal logging\nForest fires\nTemperature studies (urban heat island)\nFlooding / disaster response / building footprints, et al.\n\n\n\n\nAcquiring information from a distance, achieved through sensors on platform(e.g.Satellites, Planes (aerial imagery), Drones, Phones, Free standing on the ground or sea (with hand held devices))\ntwo types of sensor: Passive & Active\n\n\n\nsenser type\n\n\n\n\n\nWaves of an electromagnetic field, travel through space and carry radiant energy = Electromagnetic radiation (EMR)\n\n\n\nelectromagentic waves\n\n\n\n\n\nEMR experiences a number of changes prior to hitting the sensor\n\nSurface: absorbed & transmitted\nAtmospheric: Rayleigh & Mie & Non selective\n\n*Because of atmospheric scattering, we have a big issue which can prevent capture of land/the target–clouds–removing them through atmospheric correction\n\n\n\n\nSpatial = the size of the raster grid per pixel (e.g. 20cm or 30m)\nSpectral = the number of bands it records data in（We can only observe where there aren’t absorbed by the atmosphere.）can be discrete (e.g. multi spectral) or continuous (e.g. hyper spectral)\nTemporal = the time it revisits (e.g. daily, every 7 days, on demand)\nRadiometric = identify differences in light or reflectance, in practice this is the range of possible values\n\n\n\n\n\nSize of features\nDate range\nRevisit requirement\nSpectral sensitivity\nCost"
+    "text": "Landsat, Sentinel, et al.\n\n\n\n\nNear real time land cover data set with 10m resolution\nUrban/green space coverage and accessibility\nPollution studies\nIllegal logging\nForest fires\nTemperature studies (urban heat island)\nFlooding / disaster response / building footprints, et al.\n\n\n\n\nAcquiring information from a distance, achieved through sensors on platform(e.g.Satellites, Planes (aerial imagery), Drones, Phones, Free standing on the ground or sea (with hand held devices))\ntwo types of sensor: Passive & Active\n\n\n\nsenser type\n\n\nSource:Nadhir Al-Ansari\n\n\n\nWaves of an electromagnetic field, travel through space and carry radiant energy = Electromagnetic radiation (EMR)\n\n\n\nelectromagentic waves\n\n\nSource:Principles of Remote sensing\n\n\n\nEMR experiences a number of changes prior to hitting the sensor\n\nSurface: absorbed & transmitted\nAtmospheric: Rayleigh & Mie & Non selective\n\n*Because of atmospheric scattering, we have a big issue which can prevent capture of land/the target–clouds–removing them through atmospheric correction. In cloudy areas such as the UK, there may be many days when the picture will not be available\n\n\n\n\nSpatial = the size of the raster grid per pixel (e.g. 20cm or 30m)\nSpectral = the number of bands it records data in（We can only observe where there aren’t absorbed by the atmosphere.）can be discrete (e.g. multi spectral) or continuous (e.g. hyper spectral)\nTemporal = the time it revisits (e.g. daily, every 7 days, on demand)\nRadiometric = identify differences in light or reflectance, in practice this is the range of possible values\n\n\n\n\n\nSize of features\nDate range\nRevisit requirement\nSpectral sensitivity\nCost\n\n*Many studies use free landsat, and the accuracy is generally sufficient. If you need high precision, you need to buy it, and the price is relatively expensive."
   },
   {
     "objectID": "W3.html",
     "href": "W3.html",
     "title": "4  Remote sensing data",
     "section": "",
-    "text": "Occasionally remotely sensed images can contain flaws from the sensor, the atmopshere, the terrain …\n\nGeometric correction\n\nidentify Ground Control Points (GPS) - take the coordinates and model them -linear regression match the distorted image with the gold standard image - plot these and try to minimise the RMSE\n\nAtmospheric correction\n\nUnnecessary: Classification of a single image, Independent classification of multi date imagery, Composite images (combining images), Single dates or where training data extracted from all data\nNecessary: Biophysical parameters needed (e.g. temperature, leaf area index, NDVI), Using spectral signatures through time and space\n*But it is best to do both\n\n\nTypes\n\n\nRelative： 1.Normalize intensities of different bands within a single image 2.Normalise intensities of bands from many dates to one date 3.Dark object subtraction (DOS) or histogram adjustment 4.Psuedo-invariant Features (PIFs)\nAbsolute (definitive)： atmospheric radiative transfer models, require:An atmopsheric model (summer, tropical), Local atmopsheric visibility-from a weather station;Image altitude\n\nOrthorectification / Topographic correction Requires:Sensor geometry;An elevation model Atmospheric correction happens before topographic correction.\nRadiometric correction Digital Number(Sensors capture image brightness and distributed) to spectral radiance(the amount of light within a band from a sensor in the field of view (FOV))"
+    "text": "Occasionally remotely sensed images can contain flaws from the sensor, the atmopshere, the terrain …\n\nGeometric correction\n\nidentify Ground Control Points (GPS) - take the coordinates and model them -linear regression match the distorted image with the gold standard image - plot these and try to minimise the RMSE\n\nAtmospheric correction\n\nUnnecessary: Classification of a single image, Independent classification of multi date imagery, Composite images (combining images), Single dates or where training data extracted from all data\nNecessary: Biophysical parameters needed (e.g. temperature, leaf area index, NDVI), Using spectral signatures through time and space\n*But it is best to do both\nTypes:\nRelative： 1.Normalize intensities of different bands within a single image 2.Normalise intensities of bands from many dates to one date 3.Dark object subtraction (DOS) or histogram adjustment 4.Psuedo-invariant Features (PIFs)\nAbsolute (definitive)： atmospheric radiative transfer models, require: An atmopsheric model (summer, tropical), Local atmopsheric visibility-from a weather station;Image altitude\n\nOrthorectification/Topographic correction\n\nRequires: Sensor geometry; An elevation model (Atmospheric correction happens before topographic correction)\n\nRadiometric correction\n\nDigital Number(Sensors capture image brightness and distributed) to spectral radiance(the amount of light within a band from a sensor in the field of view (FOV))\n*Fortunately, some satellite products report corrected data such as Landsat ARD, LEDPAS, L8SR, LaSRC…., which can be used directly.\n\n\n\n\nMosaicking\n\nfeather the images together, creates a seamless mosaic or image(s)\n\nSource:Harris Geospatial\n\nImage Enhancement\n\nContrast Enhancement: Minimum - Maximum, Percentage Linear and Standard Deviation, Piecewise Linear Contrast Stretch,\nOther enhancements: Ratio, Low pass or low frequency, High pass or high frequency, Edge enhancement, PCA, Texture, Fusion(Pan sharpen,Data Fusion)\n*Light toned areas appearing lighter and dark areas appearing darker, making visual interpretation much easier.To target different image features, such as the input range is not uniformly distributed, choose different enhancement methods."
   },
   {
     "objectID": "W1.html#applications",
     "href": "W1.html#applications",
     "title": "2  An Introduction to Remote Sensing",
     "section": "2.2 Applications",
-    "text": "2.2 Applications\n\nPassive sensor\nActive sensor\n\nThe Shuttle Radar Topography Mission (SRTM) uses inSAR to measure Earth’s altitude with two antennas. In just a few days, SRTM collected one of the most accurate digital elevation models of the Earth. Light Detection and Ranging (LiDAR) is an active sensor that measures altitude over the ground by taking light measurements from an aircraft or helicopter platform and bouncing back to the sensor. From this, digital surface models useful for forestry can be created.\nThe two main advantages of active remote sensing are: 1.Ability to collect images day and night.2. Unaffected by clouds and adverse weather conditions."
+    "text": "2.2 Applications\nIn detecting oil spill, passive sensors cannot distinguish between oil, algae or debris on the beach. Among active sensors, the laser fluorescence sensor is the most useful instrument because of its unique ability to identify oil on backgrounds including water, soil, ice, and snow. It is the only sensor that can correctly differentiate oils against most backgrounds. The disadvantages are large volume, heavy weight and high cost. Radar offers unique potential for large area search and remote sensing of severe weather. Radar is expensive, requires specialized aircraft, and is susceptible to many jamming.(Fingas and Brown 1997)\nPassive sensors carried by satellites represented by Landsat have evolved in more diverse field such as agriculture, forestry and range resources, land use and mapping, geology, hydrology, coastal resources and environmental monitoring in these recent years.(Ridwan et al. 2018)\nThe two main advantages of active remote sensing are: 1.Ability to collect images day and night.2. Unaffected by clouds and adverse weather conditions.\nThe two main advantages of passive remote sensing are: 1.The information is accessible to the public 2.Can detect a certain area more stably and continuously.\nPossibly due to differences in image processing, it is less common to use both sensor data for a study."
   },
   {
     "objectID": "W1.html#reflection",
     "href": "W1.html#reflection",
     "title": "2  An Introduction to Remote Sensing",
     "section": "2.3 Reflection",
-    "text": "2.3 Reflection\nThere are many applications for viewing and processing remote sensing images, such as SNAP, QGIS, R, and GEE. It is better to choose a cloud that does not take up a lot of space, such as gee, and need to think about how to reduce the use of multiple software to analyze and process images in the workflow."
+    "text": "2.3 Reflection\nThis lesson talked about a lot of basic knowledge and principles of remote sensing, and explored the band of passive sensor. Many analyzes are based on band, so it is very useful to understand its principle. As for which sensor to choose this week, I only talked about the selection principle, but it is very important to choose the appropriate time, research range, and resolution as the first step in the analysis.\nThere are many applications for viewing and processing remote sensing images, such as SNAP, QGIS, R, and GEE. It is better to choose a cloud that does not take up a lot of space, such as gee, and need to think about how to reduce the use of multiple software to analyze and process images in the workflow.\n\n\n\n\nFingas, Mervin F., and Carl E. Brown. 1997. “Review of Oil Spill Remote Sensing.” Spill Science & Technology Bulletin 4 (January): 199–208. https://doi.org/10.1016/S1353-2561(98)00023-1.\n\n\nRidwan, M. A., N. A. M. Radzi, W. S. H. M. W. Ahmad, I. S. Mustafa, N. M. Din, Y. E. Jalil, A. M. Isa, N. S. Othman, and W. M. D. W. Zaki. 2018. “Applications of Landsat-8 Data: A Survey.” International Journal of Engineering &Amp; Technology 7: 436. https://www.academia.edu/79003065/Applications_of_Landsat_8_Data_a_Survey."
+  },
+  {
+    "objectID": "W3.html#applications",
+    "href": "W3.html#applications",
+    "title": "4  Remote sensing data",
+    "section": "4.2 Applications",
+    "text": "4.2 Applications"
+  },
+  {
+    "objectID": "W3.html#reflection",
+    "href": "W3.html#reflection",
+    "title": "4  Remote sensing data",
+    "section": "4.3 Reflection",
+    "text": "4.3 Reflection"
+  },
+  {
+    "objectID": "W5.html",
+    "href": "W5.html",
+    "title": "6  An introduction to Google Earth Engine",
+    "section": "",
+    "text": "Image = raster(Has bands)\nFeature = vector(Has geometry and attributes (dictionary of properties in GEE))\nImage stack = ImageCollection\nFeature stack (lots of polygons) = FeatureColletion\n\n Source:GEE\n*Use GEE server side to process images faster and does not take up local storage space, and does not need to consider projects. But it is based on Java development, which is somewhat different from R.\n\n\n\n Source:GEE\n\nTypical processes\n\n1.Geometry operations: Joins, Zonal statistics, Filtering of images or specific values…\nJoins: join image collections (e.g. satellite data from January with data from October), join feature collections (e.g. different polygons), spatial join, intersect\nReducing images:\n\n\n\nby region: image.reduceRegion() & image.reduceRegions()\n\n\nSource:GEE\n\n\n\nby neighbourhood: reduceNeighborhood()\n\n\nSource:GEE\n2.Methods: Machine learning, Supervised and unsupervised classification, Deep learning with Tensor Flow, Exploring relationships between variables…\ne.g. Linear regression: linearFit(), Multivariate Multiple Linear Regression\n3.Applications/outputs: Online charts, Scalable geospatial applications with GEE data\n*After joining image collections, reduce image according to precision requirements. Most of the time changes are analyzed when doing regression, and the change over time in pixel values is done. Treat each pixel as a row. But the independent variable still needs to be dealt with, otherwise using band as the independent variable does not represent any characteristics."
+  },
+  {
+    "objectID": "W5.html#applications",
+    "href": "W5.html#applications",
+    "title": "6  An introduction to Google Earth Engine",
+    "section": "6.2 Applications",
+    "text": "6.2 Applications\n\nReducing images by region\nReducing images by neighbourhood"
+  },
+  {
+    "objectID": "W5.html#reflection",
+    "href": "W5.html#reflection",
+    "title": "6  An introduction to Google Earth Engine",
+    "section": "6.3 Reflection",
+    "text": "6.3 Reflection\nGEE currently appears to support the entire analysis process, including data collection, collation, screening, analysis and presentation. But there may be a risk that it will no longer be free and open source? In the future, I hope to develop the function of cooperative work similar to github."
+  },
+  {
+    "objectID": "W6.html",
+    "href": "W6.html",
+    "title": "7  Classification",
+    "section": "",
+    "text": "Different sensors used for different mapping purposes, but can be mixed and matched (used intechangably).\n\n\n\nDifferent techniques to characterize UGSs\n\n\nSource:Shahtahmassebi et al. 2021\n\nClassification and regression trees (CART)\n\nclassification trees:\nGini impurity= 1-(probability of yes)^2-(the probability of no)^2\nregression trees:\nMove to each point on the x axis > calculate the average > use this average as a new threshold and get the SSR. >Use the threshold that gives smallest SSR.> Repeat for the remaining sections.\nSolve Overfitting:\n\nlimit how trees grow (e.g. a minimum number of pixels in a leaf, 20 is often used)\nWeakest link pruning (with tree score)\n\n*The second method is more complicated, usually the first method is sufficient\n\nRandom Forests\n\nFor each tree about 70% of the training data is used in the bootstrap, 30% is left out of the bag (OOB).> Test the OOB data in the forest where all the trees didn’t use it.> Most votes wins!Repeat for all OOB samples\n*Multiple is better than one, so usually research uses RF instead of CART\n\n\n\napply this to imagery(Image classification)\n\nUnsupervised(clustering/k-means)\n\n\n\n\nDBSCAN\n\n\nSource:Yuting Wan\n*DBSCAN can handle complex data, is able to identify clusters with irregular shapes, but need set suitable parameters and can’t handle where different classes can have similar spectral characteristics and can overlap.\n\n\n\nISODATA\n\n\nSource:Jensen 2016 p.409 / Muhammad Zulkarnain Abdul Rahman\n*ISODATA is capable of adjusting its parameters during the clustering process, and can handle a pixel contains a mixture of different land covers, but may have difficulty handling complex classes that have a mixture of different land covers.\n\nSupervised\n\n\n\n\nMaximum likelihood\n\n\nSource:Núñez et al. 2018 High-Resolution Satellite Imagery Classification for Urban Form Detection\n*ML is often considered one of the most accurate classification algorithms for remote sensing data, especially when the data is normally distributed, can handle multiple classes in the data.But deviations from normality can lead to biased classification results, and it’s sensitive to training data and time-consuming.\n\n\n\nSupport Vector Machine (SVM)\n\n\nSource:skilltohire\n\n\n\nSupport Vector Machine (SVM)\n\n\nSource:Soner Yildirim\n*SVM doesn’t need parametric, making it suitable for remote sensing data that may not be normally distributed. And it can handle high-dimensional remote sensing data with many features. But it lack interpretability, making it difficult to understand why certain classification decisions were made."
+  },
+  {
+    "objectID": "W6.html#applications",
+    "href": "W6.html#applications",
+    "title": "7  Classification",
+    "section": "7.2 Applications",
+    "text": "7.2 Applications\n-SVM"
+  },
+  {
+    "objectID": "W6.html#reflection",
+    "href": "W6.html#reflection",
+    "title": "7  Classification",
+    "section": "7.3 Reflection",
+    "text": "7.3 Reflection"
+  },
+  {
+    "objectID": "W7.html#applications",
+    "href": "W7.html#applications",
+    "title": "8  Classification and accuracy",
+    "section": "8.2 Applications",
+    "text": "8.2 Applications"
+  },
+  {
+    "objectID": "W7.html#reflection",
+    "href": "W7.html#reflection",
+    "title": "8  Classification and accuracy",
+    "section": "8.3 Reflection",
+    "text": "8.3 Reflection"
+  },
+  {
+    "objectID": "W8.html#applications",
+    "href": "W8.html#applications",
+    "title": "9  Temperature and policy",
+    "section": "9.2 Applications",
+    "text": "9.2 Applications"
+  },
+  {
+    "objectID": "W8.html#reflection",
+    "href": "W8.html#reflection",
+    "title": "9  Temperature and policy",
+    "section": "9.3 Reflection",
+    "text": "9.3 Reflection"
+  },
+  {
+    "objectID": "W7.html",
+    "href": "W7.html",
+    "title": "8  Classification and accuracy",
+    "section": "",
+    "text": "*Cannot rely on pre-classified data because the classification method and level of detail may not fully meet the needs of the research, and there may be potential bias.\n\nObject based image analysis (OBIA)\n\n\n\n\nSegOptim\n\n\nSource:João Gonçalves 2020\n*More accurate than pixel-based analysis, but very dependent on data quality and possible be over-segmentation.\n\nSub pixel analysis\n\n\n\n\nSub pixel analysis\n\n\nSource:Plaza et al. (2002)\n*Individual pixels represent smaller areas and the spatial resolution is higher. Also more accurate and detailed. But it requires high data accuracy, time-consuming and sensitivity to noise\n\n\n\n\nBinary confusion matrix\n\n\n\n\nmatrix\n\n\nSource:Barsi et al. 2018 Accuracy Dimensions in Remote Sensing\nIn remote sensing we focus on:\nPA Producer accuracy (recall or true positive rate or sensitivity)\nUA User’s accuracy (consumer’s accuracy or precision or positive predictive value\nOA the (overall) accuracy\n*kappa can express the accuracy of an image compared to the results by chance, but some people say that it has nothing to do with accuracy, and there is no clear conclusion\n\nF1-Score\n\nWe can’t have both a high high producer accuracy and a high user’s accuracy, so the F1-Score (F Measure) combines both PA and UA: Value from 0 to 1, where 1 is better performance\n\nReceiver Operating Characteristic Curve (the ROC Curve)\n\nConsider True Negatives, consider precision and recall at the same time , solve the problem of data imbalance\n\n\n\nmatrix\n\n\nSource:Barsi et al. 2018 Accuracy Dimensions in Remote Sensing\nTrue positive rate = TP/TP+FN = good =every plane is a plane ?\nFalse positive rate = FP/FP+TN= good = every cloud is predicted as noise (not a plane) ?\n\nRemote sensing approach\n\nclass definition>pre-processing:train and test split(train 70% test 30% in usual)or cross validation>training>pixel assignment>accuracy assessment\nBut because Spatial autocorrelation between training and test sets, best approach is spatial cross validation, can use Support Vector Machine classifier that requires hyperparameters (set before the classification)\n\n\n\nSchematic of hyperparameter tuning and performance estimation levels in CV\n\n\nSource:Lovelace et al. 2022\n*pixels perform better than the objects"
+  },
+  {
+    "objectID": "W8.html",
+    "href": "W8.html",
+    "title": "9  Temperature and policy",
+    "section": "",
+    "text": "Problem definition urban areas obtain comparatively higher atmospheric and surface temperatures than surrounding rural areas\nFactors More dark surfaces, Less vegetation\nNegative impact on social, environmental, economic Excess mortality rates,Increased electrical load, Pollution, Higher Percent GDP lost from UHI\nhope reduction in economic damages through policies\nPolicy (Global, local, Metropolitan…) New Urban Agenda, SDG, Beat The Heat Handbook, Superblocks, Medellín Green Corridors, Sydney’s western suburbs, Chicago’s green roof, Baltimore’s tree vouchers, Perth and Peel, The London Plan, Singapore’s Master Plan, Seattle’s Green Factor, Baton Rouge’s landscape ordinance, Fremantle’s Urban Forest\n\n*There are many policies, but lack of details, most of them are general goals, without specifying what data and methods to use, how to incorporate them into daily work management for implementation\n\n\n\nSome useful project ideas: Assessing or determining the potential for reflective roofs/pavements/sidewalks, Community engagement, 2021 Cool Roads Trial in Western Sydney, Accessibility to cool or green spaces/heat inequity, Disparities in the way communities are planned, developed, and maintained, Developing countries, which area has access to cooler spaces?\n\nachievable\n\n\n\n\nWorkflow\n\n\nSource:MacLachlan et al. 2021\n*There is a gap between global, metropolitan, local policy and data analysis.\nShould we focus on equal access/distribution or equitable access/distribution or providing environmental justice?\nIn order to create a more just and sustainable society, we need to consider all three concepts in tandem. We need to strive for equal access/distribution where possible, but we also need to address the structural and systemic barriers that prevent equitable access/distribution. Additionally, we need to ensure that everyone has the right to a healthy and safe environment through environmental justice initiatives."
+  },
+  {
+    "objectID": "W4.html",
+    "href": "W4.html",
+    "title": "5  W4",
+    "section": "",
+    "text": "Singapore is a tropical island city-state consisting of a main island and many smaller islands, with its center at 1.21°N and 103.49°E. As sea levels rise due to global warming, Singapore, an island nation, will face many challenges along its coastline. Years of land reclamation in Singapore have caused major changes to the natural coastline, and the coral reefs along the shoreline are also threatened by warming sea water and coral bleaching. As urbanization continues, the need to balance the development and conservation of natural habitats becomes more urgent, especially in land-constrained cities. Therefore, Singapore’s coastline needs protection. By providing an up-to-date comprehensive map of Singapore’s coastal and marine habitats, it can inform decisions for effective protection of coastal habitats.\nSDG goal 6: ensure availability and sustainable management of water and ssanitation foe all\nSDG goal 11: make cities and human settlements inclusive, safe, resilient and sustainable\nSDG goal 14: conserve and sustainably use the oceans, sea,and marine resources for sustainable development\nMaster Plan > A Sustainable and Resilient City of the Future Adapting to Climate Change > Protecting Our Coastline\n\n“Building on the findings from BCA’s Coastal Adaptation Study, long term strategies will be developed to protect Singapore’s coasts. In the meantime, several measures have been implemented to protect our coastline. Some of these strategies include:\nFlood walls\nEarth mounds\nRevetments\nFlood gates and pump stations”"
+  },
+  {
+    "objectID": "W4.html#applications",
+    "href": "W4.html#applications",
+    "title": "5  W4",
+    "section": "5.2 Applications",
+    "text": "5.2 Applications\n\nImage collection\n\nPleaides 1A and 1B satellites. They were taken with 4 multispectral bands and a resolution of 0.5 m panchromatic and 2 m multispectral.\n\nImage pre-processing (Tan et al. 2023)\n\n\nRadiometric calibration & Atmospheric corrections 2. Mosaicking\n\n\nImage post-processing and supervised classification\n\n\nSegmentation of pixels 2.Maximum Likelihood Classification (MLC) algorithm\n\n\nAccuracy assessment of the supervised classification map\n\n\nOverall accuracy 2. kappa\n\n\nPost-classification manual refinement of the habitat map\nOutput:Coastal and marine maps\n\nProvides an important reference point for researchers and resource managers to understand Singapore’s diverse and spatially heterogeneous coastal and marine environments, aids in long-term land use and conservation planning, helps assess and quantify conservation measures, and conducts long-term monitoring , and develop smart management strategies so that urban coastal ecosystems survive and provide ecosystem services for future generations"
+  },
+  {
+    "objectID": "W4.html#reflection",
+    "href": "W4.html#reflection",
+    "title": "5  W4",
+    "section": "5.3 Reflection",
+    "text": "5.3 Reflection\nSingapore’s policy of adapting to climate change is a prime example of proactive and forward-thinking governance in response to the growing threat of climate change. The policy aims to prepare Singapore for the impacts of climate change, such as rising sea levels, more frequent and intense storms, and extreme temperatures.\nAlthough Singapore has realized the importance of protecting the coastline from the policy point of view, the focus of the policy is more inclined to the artificial coastline, and the monitoring of the ecological coastline will protect Singapore’s coastline together with the monitoring of the artificial coastline.\n\n\n\n\nTan, Y. H.Jonathan, Jacqueline K. Q. Tham, Aayush Paul, Umair Rana, Hui Ping Ang, Nhung T. H. Nguyen, Alex T. K. Yee, Bryan P. I. Leong, Simon Drummond, and Karenne P. P. Tun. 2023. “Remote Sensing Mapping of the Regeneration of Coastal Natural Habitats in Singapore: Implications for Marine Conservation in Tropical Cities.” Singapore Journal of Tropical Geography 44 (January): 130–48. https://doi.org/10.1111/SJTG.12454."
   }
 ]

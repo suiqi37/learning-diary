@@ -1,0 +1,55 @@
+---
+title: "An introduction to Google Earth Engine"
+editor: visual
+---
+
+## Summary
+
+### The set up of GEE
+
+-   Image = raster(Has bands)
+-   Feature = vector(Has geometry and attributes (dictionary of properties in GEE))
+-   Image stack = ImageCollection
+-   Feature stack (lots of polygons) = FeatureColletion
+
+![scale](img/5.1.png) Source:[GEE](https://developers.google.com/earth-engine/guides/scale)
+
+\*Use GEE server side to process images faster and does not take up local storage space, and does not need to consider projects. But it is based on Java development, which is somewhat different from R.
+
+### GEE in action
+
+![Object classes](img/5.2.png) Source:[GEE](https://developers.google.com/earth-engine/guides/objects_methods_overview)
+
+-   Typical processes
+
+1.Geometry operations: Joins, Zonal statistics, Filtering of images or specific values...
+
+Joins: join image collections (e.g. satellite data from January with data from October), join feature collections (e.g. different polygons), spatial join, intersect
+
+Reducing images:
+
+![by region: image.reduceRegion() & image.reduceRegions()](img/5.3.png)
+
+Source:[GEE](https://developers.google.com/earth-engine/guides/reducers_reduce_region)
+
+![by neighbourhood: reduceNeighborhood()](img/5.4.png)
+
+Source:[GEE](https://developers.google.com/earth-engine/guides/reducers_reduce_neighborhood)
+
+2.Methods: Machine learning, Supervised and unsupervised classification, Deep learning with Tensor Flow, Exploring relationships between variables...
+
+e.g. Linear regression: linearFit(), Multivariate Multiple Linear Regression
+
+3.Applications/outputs: Online charts, Scalable geospatial applications with GEE data
+
+\*After joining image collections, reduce image according to precision requirements. Most of the time changes are analyzed when doing regression, and the change over time in pixel values is done. Treat each pixel as a row. But the independent variable still needs to be dealt with, otherwise using band as the independent variable does not represent any characteristics.
+
+## Applications
+
+In GEE, remote sensing datasets were used in 90% of the studies, while ready-to-use products were used in only 10% of the articles for analysis. Among remote sensing datasets, optical satellite imagery with moderate spatial resolution, particularly Landsat data archived for over 40 years, was widely utilized. In satellite image processing, linear regression and random forest were the most frequently employed algorithms. As for the ready-to-use products, 27% of vegetation, crop, land cover mapping, and drought monitoring studies utilized the Normalized Difference Vegetation Index (NDVI)[@Tamiminia2020]. GEE has made significant progress and continues to do so in addressing global challenges related to geobig data processing.
+
+Currently, GEE offers a restricted range of algorithms for object-based image analysis and clustering methods[@Gorelick2017]. However, the utilization of advanced segmentation and clustering algorithms is crucial for accurately defining ground truth data, particularly in large-scale land cover mapping. This is particularly important for effectively employing machine learning tools.
+
+## Reflection
+
+GEE currently appears to support the entire analysis process, including data collection, collation, screening, analysis and presentation. But there may be a risk that it will no longer be free and open source? In the future, I hope it can develop the function of cooperative work similar to github.

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>quarto - 2&nbsp; An Introduction to Remote Sensing</title>
+<title>Remote sensing Learning diary - 2&nbsp; An Introduction to Remote Sensing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,25 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
 }
 </style>
 
@@ -83,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">quarto</a> 
+      <a href="./">Remote sensing Learning diary</a> 
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -120,7 +139,32 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./W4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">W4</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./W5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">An introduction to Google Earth Engine</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./W6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./W7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Classification and accuracy</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./W8.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Temperature and policy</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -199,6 +243,7 @@ ul.task-list li input[type="checkbox"] {
 <p></p><figcaption class="figure-caption">senser type</figcaption><p></p>
 </figure>
 </div>
+<p>Source:<a href="https://www.researchgate.net/figure/Passive-and-active-sensors-systems-working-principles-24_fig2_344464269">Nadhir Al-Ansari</a></p>
 </section>
 <section id="electromagentic-waves" class="level3" data-number="2.1.4">
 <h3 data-number="2.1.4" class="anchored" data-anchor-id="electromagentic-waves"><span class="header-section-number">2.1.4</span> Electromagentic waves</h3>
@@ -209,6 +254,7 @@ ul.task-list li input[type="checkbox"] {
 <p></p><figcaption class="figure-caption">electromagentic waves</figcaption><p></p>
 </figure>
 </div>
+<p>Source:<a href="http://www.wamis.org/agm/pubs/agm8/Paper-2.pdf">Principles of Remote sensing</a></p>
 </section>
 <section id="interacting-with-earths-surface" class="level3" data-number="2.1.5">
 <h3 data-number="2.1.5" class="anchored" data-anchor-id="interacting-with-earths-surface"><span class="header-section-number">2.1.5</span> Interacting with Earth’s surface</h3>
@@ -217,7 +263,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Surface: absorbed &amp; transmitted</p></li>
 <li><p>Atmospheric: Rayleigh &amp; Mie &amp; Non selective</p></li>
 </ul>
-<p>*Because of atmospheric scattering, we have a big issue which can prevent capture of land/the target–clouds–removing them through atmospheric correction</p>
+<p>*Because of atmospheric scattering, we have a big issue which can prevent capture of land/the target–clouds–removing them through atmospheric correction. In cloudy areas such as the UK, there may be many days when the picture will not be available</p>
 </section>
 <section id="four-resolutions" class="level3" data-number="2.1.6">
 <h3 data-number="2.1.6" class="anchored" data-anchor-id="four-resolutions"><span class="header-section-number">2.1.6</span> Four resolutions</h3>
@@ -237,22 +283,31 @@ ul.task-list li input[type="checkbox"] {
 <li>Spectral sensitivity</li>
 <li>Cost</li>
 </ul>
+<p>*Many studies use free landsat, and the accuracy is generally sufficient. If you need high precision, you need to buy it, and the price is relatively expensive.</p>
 </section>
 </section>
 <section id="applications" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">2.2</span> Applications</h2>
-<ul>
-<li><p>Passive sensor</p></li>
-<li><p>Active sensor</p></li>
-</ul>
-<p>The Shuttle Radar Topography Mission (SRTM) uses inSAR to measure Earth’s altitude with two antennas. In just a few days, SRTM collected one of the most accurate digital elevation models of the Earth. Light Detection and Ranging (LiDAR) is an active sensor that measures altitude over the ground by taking light measurements from an aircraft or helicopter platform and bouncing back to the sensor. From this, digital surface models useful for forestry can be created.</p>
+<p>In detecting oil spill, passive sensors cannot distinguish between oil, algae or debris on the beach. Among active sensors, the laser fluorescence sensor is the most useful instrument because of its unique ability to identify oil on backgrounds including water, soil, ice, and snow. It is the only sensor that can correctly differentiate oils against most backgrounds. The disadvantages are large volume, heavy weight and high cost. Radar offers unique potential for large area search and remote sensing of severe weather. Radar is expensive, requires specialized aircraft, and is susceptible to many jamming.<span class="citation" data-cites="Fingas1997">(<a href="references.html#ref-Fingas1997" role="doc-biblioref">Fingas and Brown 1997</a>)</span></p>
+<p>Passive sensors carried by satellites represented by Landsat have evolved in more diverse field such as agriculture, forestry and range resources, land use and mapping, geology, hydrology, coastal resources and environmental monitoring in these recent years.<span class="citation" data-cites="Ridwan2018">(<a href="references.html#ref-Ridwan2018" role="doc-biblioref">Ridwan et al. 2018</a>)</span></p>
 <p>The two main advantages of active remote sensing are: 1.Ability to collect images day and night.2. Unaffected by clouds and adverse weather conditions.</p>
+<p>The two main advantages of passive remote sensing are: 1.The information is accessible to the public 2.Can detect a certain area more stably and continuously.</p>
+<p>Possibly due to differences in image processing, it is less common to use both sensor data for a study.</p>
 </section>
 <section id="reflection" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">2.3</span> Reflection</h2>
+<p>This lesson talked about a lot of basic knowledge and principles of remote sensing, and explored the band of passive sensor. Many analyzes are based on band, so it is very useful to understand its principle. As for which sensor to choose this week, I only talked about the selection principle, but it is very important to choose the appropriate time, research range, and resolution as the first step in the analysis.</p>
 <p>There are many applications for viewing and processing remote sensing images, such as SNAP, QGIS, R, and GEE. It is better to choose a cloud that does not take up a lot of space, such as gee, and need to think about how to reduce the use of multiple software to analyze and process images in the workflow.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-Fingas1997" class="csl-entry" role="doc-biblioentry">
+Fingas, Mervin F., and Carl E. Brown. 1997. <span>“Review of Oil Spill Remote Sensing.”</span> <em>Spill Science &amp; Technology Bulletin</em> 4 (January): 199–208. <a href="https://doi.org/10.1016/S1353-2561(98)00023-1">https://doi.org/10.1016/S1353-2561(98)00023-1</a>.
+</div>
+<div id="ref-Ridwan2018" class="csl-entry" role="doc-biblioentry">
+Ridwan, M. A., N. A. M. Radzi, W. S. H. M. W. Ahmad, I. S. Mustafa, N. M. Din, Y. E. Jalil, A. M. Isa, N. S. Othman, and W. M. D. W. Zaki. 2018. <span>“Applications of Landsat-8 Data: A Survey.”</span> <em>International Journal of Engineering &amp;Amp; Technology</em> 7: 436. <a href="https://www.academia.edu/79003065/Applications_of_Landsat_8_Data_a_Survey">https://www.academia.edu/79003065/Applications_of_Landsat_8_Data_a_Survey</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

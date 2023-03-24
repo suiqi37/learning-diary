@@ -1,0 +1,48 @@
+---
+title: "Policy"
+editor: visual
+---
+
+## Summary
+
+-   Singapore is a tropical island city-state consisting of a main island and many smaller islands, with its center at 1.21°N and 103.49°E. As sea levels rise due to global warming, Singapore, an island nation, will face many challenges along its coastline. Years of land reclamation in Singapore have caused major changes to the natural coastline, and the coral reefs along the shoreline are also threatened by warming sea water and coral bleaching. As urbanization continues, the need to balance the development and conservation of natural habitats becomes more urgent, especially in land-constrained cities. Therefore, Singapore's coastline needs protection. By providing an up-to-date comprehensive map of Singapore's coastal and marine habitats, it can inform decisions for effective protection of coastal habitats.
+
+-   SDG goal 6: ensure availability and sustainable management of water and ssanitation foe all
+
+-   SDG goal 11: make cities and human settlements inclusive, safe, resilient and sustainable
+
+-   SDG goal 14: conserve and sustainably use the oceans, sea,and marine resources for sustainable development
+
+-   Singapore Master Plan \> A Sustainable and Resilient City of the Future Adapting to Climate Change \> Protecting Our Coastline
+
+"Building on the findings from BCA's Coastal Adaptation Study, long term strategies will be developed to protect Singapore's coasts. In the meantime, several measures have been implemented to protect our coastline. Some of these strategies include:Flood walls, Earth mounds, Revetments,Flood gates and pump stations"[@MASTERPLAN]
+
+## Applications
+
+-   Image collection
+
+Pleaides 1A and 1B satellites. They were taken with 4 multispectral bands and a resolution of 0.5 m panchromatic and 2 m multispectral.
+
+-   Image pre-processing [@Tan2023]
+
+1.  Radiometric calibration & Atmospheric corrections 2. Mosaicking
+
+-   Image post-processing and supervised classification
+
+1.  Segmentation of pixels 2.Maximum Likelihood Classification (MLC) algorithm
+
+-   Accuracy assessment of the supervised classification map
+
+1.  Overall accuracy 2. kappa
+
+-   Post-classification manual refinement of the habitat map
+
+-   Output:Coastal and marine maps
+
+Provides an important reference point for researchers and resource managers to understand Singapore's diverse and spatially heterogeneous coastal and marine environments, aids in long-term land use and conservation planning, helps assess and quantify conservation measures, and conducts long-term monitoring , and develop smart management strategies so that urban coastal ecosystems survive and provide ecosystem services for future generations
+
+## Reflection
+
+Singapore's policy of adapting to climate change is a prime example of proactive and forward-thinking governance in response to the growing threat of climate change. The policy aims to prepare Singapore for the impacts of climate change, such as rising sea levels, more frequent and intense storms, and extreme temperatures.
+
+Although Singapore has realized the importance of protecting the coastline from the policy point of view, the focus of the policy is more inclined to the artificial coastline, and the monitoring of the ecological coastline will protect Singapore's coastline together with the monitoring of the artificial coastline.

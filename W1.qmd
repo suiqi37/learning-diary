@@ -11,13 +11,13 @@ Landsat, Sentinel, et al.
 
 ### Application
 
-- Near real time land cover data set with 10m resolution
-- Urban/green space coverage and accessibility 
-- Pollution studies 
-- Illegal logging
-- Forest fires
-- Temperature studies (urban heat island)
-- Flooding / disaster response / building footprints, et al.
+-   Near real time land cover data set with 10m resolution
+-   Urban/green space coverage and accessibility
+-   Pollution studies
+-   Illegal logging
+-   Forest fires
+-   Temperature studies (urban heat island)
+-   Flooding / disaster response / building footprints, et al.
 
 ### Remote Sensing
 
@@ -27,48 +27,57 @@ two types of sensor: Passive & Active
 
 ![senser type](img/1.1.png)
 
+Source:[Nadhir Al-Ansari](https://www.researchgate.net/figure/Passive-and-active-sensors-systems-working-principles-24_fig2_344464269)
+
 ### Electromagentic waves
 
 Waves of an electromagnetic field, travel through space and carry radiant energy = Electromagnetic radiation (EMR)
 
 ![electromagentic waves](img/1.2.png)
 
+Source:[Principles of Remote sensing](http://www.wamis.org/agm/pubs/agm8/Paper-2.pdf)
+
 ### Interacting with Earth's surface
 
 EMR experiences a number of changes prior to hitting the sensor
 
-- Surface: absorbed & transmitted 
+-   Surface: absorbed & transmitted
 
-- Atmospheric: Rayleigh & Mie & Non selective
+-   Atmospheric: Rayleigh & Mie & Non selective
 
-*Because of atmospheric scattering, we have a big issue which can prevent capture of land/the target--clouds--removing them through atmospheric correction
+\*Because of atmospheric scattering, we have a big issue which can prevent capture of land/the target--clouds--removing them through atmospheric correction. In cloudy areas such as the UK, there may be many days when the picture will not be available
 
 ### Four resolutions
 
-- Spatial = the size of the raster grid per pixel (e.g. 20cm or 30m)
-- Spectral = the number of bands it records data in（We can only observe where there aren't absorbed by the atmosphere.）can be discrete (e.g. multi spectral) or continuous (e.g. hyper spectral)
-- Temporal = the time it revisits (e.g. daily, every 7 days, on demand)
-- Radiometric = identify differences in light or reflectance, in practice this is the range of possible values
+-   Spatial = the size of the raster grid per pixel (e.g. 20cm or 30m)
+-   Spectral = the number of bands it records data in（We can only observe where there aren't absorbed by the atmosphere.）can be discrete (e.g. multi spectral) or continuous (e.g. hyper spectral)
+-   Temporal = the time it revisits (e.g. daily, every 7 days, on demand)
+-   Radiometric = identify differences in light or reflectance, in practice this is the range of possible values
 
 ### what sensor is most appropriate depents on
 
-- Size of features
-- Date range
-- Revisit requirement
-- Spectral sensitivity
-- Cost
+-   Size of features
+-   Date range
+-   Revisit requirement
+-   Spectral sensitivity
+-   Cost
+
+\*Many studies use free landsat, and the accuracy is generally sufficient. If you need high precision, you need to buy it, and the price is relatively expensive.
 
 ## Applications
 
-- Passive sensor
+In detecting oil spill, passive sensors cannot distinguish between oil, algae or debris on the beach. Among active sensors, the laser fluorescence sensor is the most useful instrument because of its unique ability to identify oil on backgrounds including water, soil, ice, and snow. It is the only sensor that can correctly differentiate oils against most backgrounds. The disadvantages are large volume, heavy weight and high cost. Radar offers unique potential for large area search and remote sensing of severe weather. Radar is expensive, requires specialized aircraft, and is susceptible to many jamming[@Fingas1997].
 
-
-- Active sensor
-
-The Shuttle Radar Topography Mission (SRTM) uses inSAR to measure Earth's altitude with two antennas. In just a few days, SRTM collected one of the most accurate digital elevation models of the Earth. Light Detection and Ranging (LiDAR) is an active sensor that measures altitude over the ground by taking light measurements from an aircraft or helicopter platform and bouncing back to the sensor. From this, digital surface models useful for forestry can be created.
+Passive sensors carried by satellites represented by Landsat have evolved in more diverse field such as agriculture, forestry and range resources, land use and mapping, geology, hydrology, coastal resources and environmental monitoring in these recent years[@Ridwan2018].
 
 The two main advantages of active remote sensing are: 1.Ability to collect images day and night.2. Unaffected by clouds and adverse weather conditions.
 
+The two main advantages of passive remote sensing are: 1.The information is accessible to the public 2.Can detect a certain area more stably and continuously.
+
+Possibly due to differences in image processing, it is less common to use both sensor data for a study.
+
 ## Reflection
+
+This lesson talked about a lot of basic knowledge and principles of remote sensing, and explored the band of passive sensor. Many analyzes are based on band, so it is very useful to understand its principle. As for which sensor to choose this week, only talked about the selection principle, but it is very important to choose the appropriate time, research range, and resolution as the first step in the analysis.
 
 There are many applications for viewing and processing remote sensing images, such as SNAP, QGIS, R, and GEE. It is better to choose a cloud that does not take up a lot of space, such as gee, and need to think about how to reduce the use of multiple software to analyze and process images in the workflow.

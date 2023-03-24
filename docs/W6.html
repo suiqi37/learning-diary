@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Remote sensing Learning diary - 4&nbsp; Remote sensing data</title>
+<title>Remote sensing Learning diary - 7&nbsp; Classification</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./W4.html" rel="next">
-<link href="./W2.html" rel="prev">
+<link href="./W7.html" rel="next">
+<link href="./W5.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote sensing data</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -115,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./W3.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote sensing data</span></a>
+  <a href="./W3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote sensing data</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -130,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./W6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification</span></a>
+  <a href="./W6.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -162,13 +162,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">4.1</span>  Summary</a>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">7.1</span>  Summary</a>
   <ul class="collapse">
-  <li><a href="#corrections" id="toc-corrections" class="nav-link" data-scroll-target="#corrections"><span class="toc-section-number">4.1.1</span>  corrections</a></li>
-  <li><a href="#joining-data-setsmosaickingenhancements" id="toc-joining-data-setsmosaickingenhancements" class="nav-link" data-scroll-target="#joining-data-setsmosaickingenhancements"><span class="toc-section-number">4.1.2</span>  Joining data sets(Mosaicking/enhancements)</a></li>
+  <li><a href="#review-of-how-classified-data-is-used" id="toc-review-of-how-classified-data-is-used" class="nav-link" data-scroll-target="#review-of-how-classified-data-is-used"><span class="toc-section-number">7.1.1</span>  Review of how classified data is used</a></li>
+  <li><a href="#how-to-classify-remotely-sensed-data" id="toc-how-to-classify-remotely-sensed-data" class="nav-link" data-scroll-target="#how-to-classify-remotely-sensed-data"><span class="toc-section-number">7.1.2</span>  How to classify remotely sensed data</a></li>
   </ul></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="toc-section-number">4.2</span>  Applications</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">4.3</span>  Reflection</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="toc-section-number">7.2</span>  Applications</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">7.3</span>  Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -177,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote sensing data</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification</span></h1>
 </div>
 
 
@@ -191,55 +191,93 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="summary" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.1</span> Summary</h2>
-<section id="corrections" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="corrections"><span class="header-section-number">4.1.1</span> corrections</h3>
-<p>Occasionally remotely sensed images can contain flaws from the sensor, the atmopshere, the terrain …</p>
+<section id="summary" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.1</span> Summary</h2>
+<section id="review-of-how-classified-data-is-used" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="review-of-how-classified-data-is-used"><span class="header-section-number">7.1.1</span> Review of how classified data is used</h3>
+<p>Different sensors used for different mapping purposes, but can be mixed and matched (used intechangably).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/6.1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Different techniques to characterize UGSs</figcaption><p></p>
+</figure>
+</div>
+<p>Source:<a href="https://www.sciencedirect.com/science/article/pii/S1618866720307639?casa_token=ZrACATZktIAAAAAA:9bCBg0pBWBsIPmYMufywYK54cyPXoImsgNxQCN_JBR2zUQ50mvnKHcKZ9CnB2ywCNNsOCw-tpBU#!">Shahtahmassebi et al.&nbsp;2021</a></p>
 <ul>
-<li>Geometric correction</li>
+<li>Classification and regression trees (CART)</li>
 </ul>
-<p>identify Ground Control Points (GPS) - take the coordinates and model them -linear regression match the distorted image with the gold standard image - plot these and try to minimise the RMSE</p>
+<p>classification trees:</p>
+<p>Gini impurity= 1-(probability of yes)^2-(the probability of no)^2</p>
+<p>regression trees:</p>
+<p>Move to each point on the x axis &gt; calculate the average &gt; use this average as a new threshold and get the SSR. &gt;Use the threshold that gives smallest SSR.&gt; Repeat for the remaining sections.</p>
+<p>Solve Overfitting:</p>
+<ol type="1">
+<li><p>limit how trees grow (e.g.&nbsp;a minimum number of pixels in a leaf, 20 is often used)</p></li>
+<li><p>Weakest link pruning (with tree score)</p></li>
+</ol>
+<p>*The second method is more complicated, usually the first method is sufficient</p>
 <ul>
-<li>Atmospheric correction</li>
+<li>Random Forests</li>
 </ul>
-<p>Unnecessary: Classification of a single image, Independent classification of multi date imagery, Composite images (combining images), Single dates or where training data extracted from all data</p>
-<p>Necessary: Biophysical parameters needed (e.g.&nbsp;temperature, leaf area index, NDVI), Using spectral signatures through time and space</p>
-<p>*But it is best to do both</p>
-<p>Types:</p>
-<p>Relative： 1.Normalize intensities of different bands within a single image 2.Normalise intensities of bands from many dates to one date 3.Dark object subtraction (DOS) or histogram adjustment 4.Psuedo-invariant Features (PIFs)</p>
-<p>Absolute (definitive)： atmospheric radiative transfer models, require: An atmopsheric model (summer, tropical), Local atmopsheric visibility-from a weather station;Image altitude</p>
-<ul>
-<li>Orthorectification/Topographic correction</li>
-</ul>
-<p>Requires: Sensor geometry; An elevation model (Atmospheric correction happens before topographic correction)</p>
-<ul>
-<li>Radiometric correction</li>
-</ul>
-<p>Digital Number(Sensors capture image brightness and distributed) to spectral radiance(the amount of light within a band from a sensor in the field of view (FOV))</p>
-<p>*Fortunately, some satellite products report corrected data such as Landsat ARD, LEDPAS, L8SR, LaSRC…., which can be used directly.</p>
+<p>For each tree about 70% of the training data is used in the bootstrap, 30% is left out of the bag (OOB).&gt; Test the OOB data in the forest where all the trees didn’t use it.&gt; Most votes wins!Repeat for all OOB samples</p>
+<p>*Multiple is better than one, so usually research uses RF instead of CART</p>
 </section>
-<section id="joining-data-setsmosaickingenhancements" class="level3" data-number="4.1.2">
-<h3 data-number="4.1.2" class="anchored" data-anchor-id="joining-data-setsmosaickingenhancements"><span class="header-section-number">4.1.2</span> Joining data sets(Mosaicking/enhancements)</h3>
+<section id="how-to-classify-remotely-sensed-data" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="how-to-classify-remotely-sensed-data"><span class="header-section-number">7.1.2</span> How to classify remotely sensed data</h3>
+<p>apply this to imagery(Image classification)</p>
 <ul>
-<li>Mosaicking</li>
+<li>Unsupervised(clustering/k-means)</li>
 </ul>
-<p>feather the images together, creates a seamless mosaic or image(s)</p>
-<p><img src="img/3.1.png" class="img-fluid"></p>
-<p>Source:<a href="https://www.l3harrisgeospatial.com/docs/mosaicseamless.html">Harris Geospatial</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/6.2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">DBSCAN</figcaption><p></p>
+</figure>
+</div>
+<p>Source:<a href="https://www.researchgate.net/figure/Encoding-strategy-for-the-EAs-based-remote-sensing-image-clustering-approaches_fig2_320378302">Yuting Wan</a></p>
+<p>*DBSCAN can handle complex data, is able to identify clusters with irregular shapes, but need set suitable parameters and can’t handle where different classes can have similar spectral characteristics and can overlap.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/6.3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">ISODATA</figcaption><p></p>
+</figure>
+</div>
+<p>Source:<a href="https://people.utm.my/nurulhazrina/files/2015/05/L12-Unsupervised-classification.pdf">Jensen 2016 p.409 / Muhammad Zulkarnain Abdul Rahman</a></p>
+<p>*ISODATA is capable of adjusting its parameters during the clustering process, and can handle a pixel contains a mixture of different land covers, but may have difficulty handling complex classes that have a mixture of different land covers.</p>
 <ul>
-<li>Image Enhancement</li>
+<li>Supervised</li>
 </ul>
-<p>Contrast Enhancement: Minimum - Maximum, Percentage Linear and Standard Deviation, Piecewise Linear Contrast Stretch,</p>
-<p>Other enhancements: Ratio, Low pass or low frequency, High pass or high frequency, Edge enhancement, PCA, Texture, Fusion(Pan sharpen,Data Fusion)</p>
-<p>*Light toned areas appearing lighter and dark areas appearing darker, making visual interpretation much easier.To target different image features, such as the input range is not uniformly distributed, choose different enhancement methods.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/6.4.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Maximum likelihood</figcaption><p></p>
+</figure>
+</div>
+<p>Source:<a href="https://www.intechopen.com/chapters/64971">Núñez et al.&nbsp;2018 High-Resolution Satellite Imagery Classification for Urban Form Detection</a></p>
+<p>*ML is often considered one of the most accurate classification algorithms for remote sensing data, especially when the data is normally distributed, can handle multiple classes in the data.But deviations from normality can lead to biased classification results, and it’s sensitive to training data and time-consuming.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/6.5.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Support Vector Machine (SVM)</figcaption><p></p>
+</figure>
+</div>
+<p>Source:<a href="https://medium.com/@skilltohire/support-vector-machines-4d28a427ebd">skilltohire</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/6.6.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Support Vector Machine (SVM)</figcaption><p></p>
+</figure>
+</div>
+<p>Source:<a href="https://towardsdatascience.com/hyperparameter-tuning-for-support-vector-machines-c-and-gamma-parameters-6a5097416167">Soner Yildirim</a></p>
+<p>*SVM doesn’t need parametric, making it suitable for remote sensing data that may not be normally distributed. And it can handle high-dimensional remote sensing data with many features. But it lack interpretability, making it difficult to understand why certain classification decisions were made.</p>
 </section>
 </section>
-<section id="applications" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">4.2</span> Applications</h2>
+<section id="applications" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">7.2</span> Applications</h2>
+<p>-SVM</p>
 </section>
-<section id="reflection" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">4.3</span> Reflection</h2>
+<section id="reflection" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
 
 
 </section>
@@ -345,13 +383,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./W2.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presantation</span></span>
+      <a href="./W5.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">An introduction to Google Earth Engine</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./W4.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">W4</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./W7.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Classification and accuracy</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

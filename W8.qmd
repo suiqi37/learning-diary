@@ -1,0 +1,36 @@
+---
+title: "Temperature and policy"
+editor: visual
+---
+
+## Summary
+
+### Temperature and policy (Urban Heat Island)
+
+-   Problem definition urban areas obtain comparatively higher atmospheric and surface temperatures than surrounding rural areas
+-   Factors More dark surfaces, Less vegetation
+-   Negative impact on social, environmental, economic Excess mortality rates,Increased electrical load, Pollution, Higher Percent GDP lost from UHI
+-   hope reduction in economic damages through policies
+-   Policy (Global, local, Metropolitan...) New Urban Agenda, SDG, Beat The Heat Handbook, Superblocks, Medellín Green Corridors, Sydney's western suburbs, Chicago's green roof, Baltimore's tree vouchers, Perth and Peel, The London Plan, Singapore's Master Plan, Seattle's Green Factor, Baton Rouge's landscape ordinance, Fremantle's Urban Forest
+
+\*There are many policies, but lack of details, most of them are general goals, without specifying what data and methods to use, how to incorporate them into daily work management for implementation
+
+### Extracting temperature from satellite data
+
+Some useful project ideas: Assessing or determining the potential for reflective roofs/pavements/sidewalks, Community engagement, 2021 Cool Roads Trial in Western Sydney, Accessibility to cool or green spaces/heat inequity, Disparities in the way communities are planned, developed, and maintained, Developing countries, which area has access to cooler spaces?
+
+-   achievable
+
+![Workflow](img/8.1.png)
+
+Source:[MacLachlan et al. 2021](https://www.frontiersin.org/articles/10.3389/fbuil.2020.519599/full)
+
+\*There is a gap between global, metropolitan, local policy and data analysis.
+
+Should we focus on equal access/distribution or equitable access/distribution or providing environmental justice?
+
+In order to create a more just and sustainable society, we need to consider all three concepts in tandem. We need to strive for equal access/distribution where possible, but we also need to address the structural and systemic barriers that prevent equitable access/distribution. Additionally, we need to ensure that everyone has the right to a healthy and safe environment through environmental justice initiatives.
+
+## Applications
+
+## Reflection

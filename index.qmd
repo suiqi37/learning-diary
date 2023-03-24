@@ -1,13 +1,5 @@
 # Preface {.unnumbered}
 
-Remote sensing learning diary.
+Qi Sui's Remote sensing learning diary.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
 
-```{r}
-1 + 1
-```
-
-::: callout-note
-hello
-:::

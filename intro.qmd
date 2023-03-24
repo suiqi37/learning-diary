@@ -1,5 +1,3 @@
 ## Introduction {#sec-introduction}
 
-Qi Sui
-
-
+My undergraduate major is urban and rural planning, and my studies include urban design and urban-related policies (such as transportation, greening, heritage protection, etc.). I have had two internships in the Planning Institute, and participated in the design and smart city research of a new district in Nanjing, China, and the historical heritage planning of Chengdu, China. I have only used remote sensing imagery to extract ndvi for land use evaluation before, but I don't know anything about remote sensing. This course is a recommended course for the smart city pathway. I hope that I can have a general understanding of remote sensing images and analysis methods and their application in research from this course. I hope I can start from the acquisition of images and complete the analysis of urban problems (such as drought, urban heat island etc.) research.
